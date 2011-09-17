@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AroundMeViewController : UIViewController
+@interface AroundMeViewController : UIViewController <UITabBarDelegate>{
+   IBOutlet UITableView *tableView;
+    NSMutableArray *categoryArray;
+}
 
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property (nonatomic, retain)			NSMutableArray	*categoryArray;
 @end

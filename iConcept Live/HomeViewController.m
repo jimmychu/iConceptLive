@@ -7,8 +7,17 @@
 //
 
 #import "HomeViewController.h"
+#import "AroundMeViewController.h"
 
 @implementation HomeViewController
+
+- (IBAction)pushViewController:(id)sender{
+    AroundMeViewController *aroundmeViewController = [[AroundMeViewController alloc] init];
+    aroundmeViewController.title = @"Around Me";
+     [self.navigationController pushViewController:aroundmeViewController animated:YES];
+    [aroundmeViewController release];
+    
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -18,6 +27,7 @@
     }
     return self;
 }
+
 
 - (void)didReceiveMemoryWarning
 {

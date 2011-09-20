@@ -69,7 +69,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView 
 {
     return 1;
-}
+} 
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 

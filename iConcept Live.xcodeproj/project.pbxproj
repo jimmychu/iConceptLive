@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCB6BE07142E012800DCA5F4 /* AroundMeMapResults.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB6BE01142E012800DCA5F4 /* AroundMeMapResults.m */; };
+		DCB6BE08142E012800DCA5F4 /* AroundMeMapResults.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB6BE02142E012800DCA5F4 /* AroundMeMapResults.xib */; };
+		DCB6BE09142E012800DCA5F4 /* AroundMeResults.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB6BE03142E012800DCA5F4 /* AroundMeResults.m */; };
+		DCB6BE0A142E012800DCA5F4 /* AroundMeResults.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB6BE04142E012800DCA5F4 /* AroundMeResults.xib */; };
+		DCB6BE0B142E012800DCA5F4 /* AroundMeResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB6BE06142E012800DCA5F4 /* AroundMeResultsViewController.xib */; };
+		DCB6BE0F142E014900DCA5F4 /* AroundMeResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB6BE0E142E014900DCA5F4 /* AroundMeResultsViewController.m */; };
+		DCB6BE11142E01D400DCA5F4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB6BE10142E01D400DCA5F4 /* CoreLocation.framework */; };
+		DCB6BE13142E01D900DCA5F4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB6BE12142E01D900DCA5F4 /* MapKit.framework */; };
 		DCBC8AB014238C180067C0B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBC8AAF14238C180067C0B4 /* UIKit.framework */; };
 		DCBC8AB214238C180067C0B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBC8AB114238C180067C0B4 /* Foundation.framework */; };
 		DCBC8AB414238C180067C0B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBC8AB314238C180067C0B4 /* CoreGraphics.framework */; };
@@ -23,6 +31,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DCB6BE00142E012800DCA5F4 /* AroundMeMapResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AroundMeMapResults.h; sourceTree = "<group>"; };
+		DCB6BE01142E012800DCA5F4 /* AroundMeMapResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AroundMeMapResults.m; sourceTree = "<group>"; };
+		DCB6BE02142E012800DCA5F4 /* AroundMeMapResults.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AroundMeMapResults.xib; sourceTree = "<group>"; };
+		DCB6BE03142E012800DCA5F4 /* AroundMeResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AroundMeResults.m; sourceTree = "<group>"; };
+		DCB6BE04142E012800DCA5F4 /* AroundMeResults.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AroundMeResults.xib; sourceTree = "<group>"; };
+		DCB6BE05142E012800DCA5F4 /* AroundMeResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AroundMeResultsViewController.h; sourceTree = "<group>"; };
+		DCB6BE06142E012800DCA5F4 /* AroundMeResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AroundMeResultsViewController.xib; sourceTree = "<group>"; };
+		DCB6BE0D142E014900DCA5F4 /* AroundMeResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AroundMeResults.h; sourceTree = "<group>"; };
+		DCB6BE0E142E014900DCA5F4 /* AroundMeResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AroundMeResultsViewController.m; sourceTree = "<group>"; };
+		DCB6BE10142E01D400DCA5F4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DCB6BE12142E01D900DCA5F4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DCBC8AAB14238C180067C0B4 /* iConcept Live.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iConcept Live.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCBC8AAF14238C180067C0B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DCBC8AB114238C180067C0B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -49,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB6BE13142E01D900DCA5F4 /* MapKit.framework in Frameworks */,
+				DCB6BE11142E01D400DCA5F4 /* CoreLocation.framework in Frameworks */,
 				DCBC8AB014238C180067C0B4 /* UIKit.framework in Frameworks */,
 				DCBC8AB214238C180067C0B4 /* Foundation.framework in Frameworks */,
 				DCBC8AB414238C180067C0B4 /* CoreGraphics.framework in Frameworks */,
@@ -62,6 +83,8 @@
 		DCBC8AA014238C180067C0B4 = {
 			isa = PBXGroup;
 			children = (
+				DCB6BE12142E01D900DCA5F4 /* MapKit.framework */,
+				DCB6BE10142E01D400DCA5F4 /* CoreLocation.framework */,
 				DCBC8AB714238C180067C0B4 /* iConcept Live */,
 				DCBC8AAE14238C180067C0B4 /* Frameworks */,
 				DCBC8AAC14238C180067C0B4 /* Products */,
@@ -90,6 +113,15 @@
 		DCBC8AB714238C180067C0B4 /* iConcept Live */ = {
 			isa = PBXGroup;
 			children = (
+				DCB6BE0D142E014900DCA5F4 /* AroundMeResults.h */,
+				DCB6BE0E142E014900DCA5F4 /* AroundMeResultsViewController.m */,
+				DCB6BE00142E012800DCA5F4 /* AroundMeMapResults.h */,
+				DCB6BE01142E012800DCA5F4 /* AroundMeMapResults.m */,
+				DCB6BE02142E012800DCA5F4 /* AroundMeMapResults.xib */,
+				DCB6BE03142E012800DCA5F4 /* AroundMeResults.m */,
+				DCB6BE04142E012800DCA5F4 /* AroundMeResults.xib */,
+				DCB6BE05142E012800DCA5F4 /* AroundMeResultsViewController.h */,
+				DCB6BE06142E012800DCA5F4 /* AroundMeResultsViewController.xib */,
 				DCBC8AC014238C190067C0B4 /* iConcept_LiveAppDelegate.h */,
 				DCBC8AC114238C190067C0B4 /* iConcept_LiveAppDelegate.m */,
 				DCBC8AC314238C190067C0B4 /* MainWindow.xib */,
@@ -167,6 +199,9 @@
 				DCBC8AC514238C190067C0B4 /* MainWindow.xib in Resources */,
 				DCBC8AD214238D8B0067C0B4 /* HomeViewController.xib in Resources */,
 				DCBC8AD7142393EF0067C0B4 /* AroundMeViewController.xib in Resources */,
+				DCB6BE08142E012800DCA5F4 /* AroundMeMapResults.xib in Resources */,
+				DCB6BE0A142E012800DCA5F4 /* AroundMeResults.xib in Resources */,
+				DCB6BE0B142E012800DCA5F4 /* AroundMeResultsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +217,9 @@
 				DCBC8AC814238C190067C0B4 /* iConcept_Live.xcdatamodeld in Sources */,
 				DCBC8AD114238D8B0067C0B4 /* HomeViewController.m in Sources */,
 				DCBC8AD6142393EF0067C0B4 /* AroundMeViewController.m in Sources */,
+				DCB6BE07142E012800DCA5F4 /* AroundMeMapResults.m in Sources */,
+				DCB6BE09142E012800DCA5F4 /* AroundMeResults.m in Sources */,
+				DCB6BE0F142E014900DCA5F4 /* AroundMeResultsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +329,7 @@
 				DCBC8ACD14238C190067C0B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

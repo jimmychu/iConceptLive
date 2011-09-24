@@ -7,6 +7,7 @@
 //
 
 #import "AroundMeViewController.h"
+#import "AroundMeResultsViewController.h"
 
 @implementation AroundMeViewController
 @synthesize tableView;
@@ -93,6 +94,20 @@
 	[cell.textLabel setText:[categoryArray objectAtIndex:indexPath.row]];
 	
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    AroundMeResultsViewController *aroundmeResultsController = [[AroundMeResultsViewController alloc] init];
+    
+    
+    aroundmeResultsController.title = @"Results";
+    //secondViewController.responseString = self.responseString;
+    
+    [self.navigationController pushViewController:aroundmeResultsController animated:YES];
+    // [self presentModalViewController:detailViewController animated:YES];
+    
+    [aroundmeResultsController release];
 }
 
 - (void)viewDidUnload

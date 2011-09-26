@@ -49,7 +49,6 @@
 						<string key="NSFrame">{{0, 411}, {320, 49}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:515</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -69,12 +68,6 @@
 								<string key="IBUITitle"/>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIBadgeValue">Map</string>
-								<reference key="IBUITabBar" ref="1054394852"/>
-							</object>
-							<object class="IBUITabBarItem" id="902789510">
-								<int key="IBUITag">2</int>
-								<string key="IBUITitle">TBD</string>
-								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<reference key="IBUITabBar" ref="1054394852"/>
 							</object>
 						</object>
@@ -157,7 +150,6 @@
 						<reference key="object" ref="1054394852"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="902789510"/>
 							<reference ref="549483229"/>
 							<reference ref="667447859"/>
 						</object>
@@ -166,11 +158,6 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">5</int>
 						<reference key="object" ref="667447859"/>
-						<reference key="parent" ref="1054394852"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">6</int>
-						<reference key="object" ref="902789510"/>
 						<reference key="parent" ref="1054394852"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -191,7 +178,6 @@
 					<string>1.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
 					<string>5.IBPluginDependency</string>
-					<string>6.IBPluginDependency</string>
 					<string>9.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
@@ -199,7 +185,6 @@
 					<string>AroundMeResultsViewController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>UIResponder</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>

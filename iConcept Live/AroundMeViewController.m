@@ -100,9 +100,12 @@
     
     AroundMeResultsViewController *aroundmeResultsController = [[AroundMeResultsViewController alloc] init];
     
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
-    aroundmeResultsController.title = @"Results";
+    aroundmeResultsController.title = cell.textLabel.text;
     //secondViewController.responseString = self.responseString;
+    
+   
     
     [self.navigationController pushViewController:aroundmeResultsController animated:YES];
     // [self presentModalViewController:detailViewController animated:YES];

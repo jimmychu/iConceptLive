@@ -105,7 +105,7 @@
     aroundmeResultsController.title = cell.textLabel.text;
     //secondViewController.responseString = self.responseString;
     
-   
+    aroundmeResultsController.categoryName = cell.textLabel;
     
     [self.navigationController pushViewController:aroundmeResultsController animated:YES];
     // [self presentModalViewController:detailViewController animated:YES];

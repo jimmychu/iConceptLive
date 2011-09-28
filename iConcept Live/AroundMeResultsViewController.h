@@ -10,11 +10,14 @@
 @interface AroundMeResultsViewController : UIViewController <UITabBarDelegate>{
     UITabBar *myTabBar;
     UIViewController *currentViewController;
+    IBOutlet UILabel *categoryName; 
 }
 
 @property (nonatomic, retain) IBOutlet UITabBar *myTabBar;
 
 @property (nonatomic, retain) UIViewController *currentViewController;
+
+@property (nonatomic, retain) IBOutlet UILabel *categoryName;
 
 
 @end

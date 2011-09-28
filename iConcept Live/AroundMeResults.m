@@ -9,6 +9,8 @@
 #import "AroundMeResults.h"
 
 @implementation AroundMeResults
+@synthesize categoryName;
+@synthesize categoryNameValue;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +35,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+   [categoryNameValue setText:self.categoryName.text];
 }
 
 - (void)viewDidUnload

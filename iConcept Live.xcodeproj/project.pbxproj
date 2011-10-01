@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC89B829143742AE00A35C7C /* CustomTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC89B827143742AE00A35C7C /* CustomTableCell.m */; };
+		DC89B82A143742AE00A35C7C /* CustomTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC89B828143742AE00A35C7C /* CustomTableCell.xib */; };
+		DC89B835143745E800A35C7C /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = DC89B82E143745E700A35C7C /* NSObject+SBJSON.m */; };
+		DC89B836143745E800A35C7C /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = DC89B830143745E800A35C7C /* NSString+SBJSON.m */; };
+		DC89B837143745E800A35C7C /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DC89B832143745E800A35C7C /* SBJsonParser.m */; };
+		DC89B838143745E800A35C7C /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = DC89B834143745E800A35C7C /* SBJsonWriter.m */; };
+		DC89B83A143745F000A35C7C /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DC89B839143745F000A35C7C /* SBJsonBase.m */; };
 		DCB6BE07142E012800DCA5F4 /* AroundMeMapResults.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB6BE01142E012800DCA5F4 /* AroundMeMapResults.m */; };
 		DCB6BE08142E012800DCA5F4 /* AroundMeMapResults.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB6BE02142E012800DCA5F4 /* AroundMeMapResults.xib */; };
 		DCB6BE09142E012800DCA5F4 /* AroundMeResults.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB6BE03142E012800DCA5F4 /* AroundMeResults.m */; };
@@ -31,6 +38,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC89B826143742AE00A35C7C /* CustomTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableCell.h; sourceTree = "<group>"; };
+		DC89B827143742AE00A35C7C /* CustomTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableCell.m; sourceTree = "<group>"; };
+		DC89B828143742AE00A35C7C /* CustomTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableCell.xib; sourceTree = "<group>"; };
+		DC89B82C143745CB00A35C7C /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		DC89B82D143745E700A35C7C /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		DC89B82E143745E700A35C7C /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		DC89B82F143745E700A35C7C /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		DC89B830143745E800A35C7C /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		DC89B831143745E800A35C7C /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		DC89B832143745E800A35C7C /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		DC89B833143745E800A35C7C /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		DC89B834143745E800A35C7C /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		DC89B839143745F000A35C7C /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		DC89B83B143745F900A35C7C /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
 		DCB6BE00142E012800DCA5F4 /* AroundMeMapResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AroundMeMapResults.h; sourceTree = "<group>"; };
 		DCB6BE01142E012800DCA5F4 /* AroundMeMapResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AroundMeMapResults.m; sourceTree = "<group>"; };
 		DCB6BE02142E012800DCA5F4 /* AroundMeMapResults.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AroundMeMapResults.xib; sourceTree = "<group>"; };
@@ -113,12 +134,26 @@
 		DCBC8AB714238C180067C0B4 /* iConcept Live */ = {
 			isa = PBXGroup;
 			children = (
+				DC89B83B143745F900A35C7C /* SBJsonBase.h */,
+				DC89B839143745F000A35C7C /* SBJsonBase.m */,
+				DC89B82D143745E700A35C7C /* NSObject+SBJSON.h */,
+				DC89B82E143745E700A35C7C /* NSObject+SBJSON.m */,
+				DC89B82F143745E700A35C7C /* NSString+SBJSON.h */,
+				DC89B830143745E800A35C7C /* NSString+SBJSON.m */,
+				DC89B831143745E800A35C7C /* SBJsonParser.h */,
+				DC89B832143745E800A35C7C /* SBJsonParser.m */,
+				DC89B833143745E800A35C7C /* SBJsonWriter.h */,
+				DC89B834143745E800A35C7C /* SBJsonWriter.m */,
+				DC89B82C143745CB00A35C7C /* JSON.h */,
 				DCB6BE0D142E014900DCA5F4 /* AroundMeResults.h */,
 				DCB6BE0E142E014900DCA5F4 /* AroundMeResultsViewController.m */,
 				DCB6BE00142E012800DCA5F4 /* AroundMeMapResults.h */,
 				DCB6BE01142E012800DCA5F4 /* AroundMeMapResults.m */,
 				DCB6BE02142E012800DCA5F4 /* AroundMeMapResults.xib */,
 				DCB6BE03142E012800DCA5F4 /* AroundMeResults.m */,
+				DC89B826143742AE00A35C7C /* CustomTableCell.h */,
+				DC89B827143742AE00A35C7C /* CustomTableCell.m */,
+				DC89B828143742AE00A35C7C /* CustomTableCell.xib */,
 				DCB6BE04142E012800DCA5F4 /* AroundMeResults.xib */,
 				DCB6BE05142E012800DCA5F4 /* AroundMeResultsViewController.h */,
 				DCB6BE06142E012800DCA5F4 /* AroundMeResultsViewController.xib */,
@@ -202,6 +237,7 @@
 				DCB6BE08142E012800DCA5F4 /* AroundMeMapResults.xib in Resources */,
 				DCB6BE0A142E012800DCA5F4 /* AroundMeResults.xib in Resources */,
 				DCB6BE0B142E012800DCA5F4 /* AroundMeResultsViewController.xib in Resources */,
+				DC89B82A143742AE00A35C7C /* CustomTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +256,12 @@
 				DCB6BE07142E012800DCA5F4 /* AroundMeMapResults.m in Sources */,
 				DCB6BE09142E012800DCA5F4 /* AroundMeResults.m in Sources */,
 				DCB6BE0F142E014900DCA5F4 /* AroundMeResultsViewController.m in Sources */,
+				DC89B829143742AE00A35C7C /* CustomTableCell.m in Sources */,
+				DC89B835143745E800A35C7C /* NSObject+SBJSON.m in Sources */,
+				DC89B836143745E800A35C7C /* NSString+SBJSON.m in Sources */,
+				DC89B837143745E800A35C7C /* SBJsonParser.m in Sources */,
+				DC89B838143745E800A35C7C /* SBJsonWriter.m in Sources */,
+				DC89B83A143745F000A35C7C /* SBJsonBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

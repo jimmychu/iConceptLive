@@ -7,10 +7,16 @@
 //
 
 #import "AroundMeResults.h"
+#import "JSON.h"
+#import "CustomTableCell.h"
 
 @implementation AroundMeResults
 @synthesize categoryName;
 @synthesize categoryNameValue;
+@synthesize responseString;
+@synthesize resultsArray;
+@synthesize tableView;
+@synthesize total;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,7 +42,51 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-   [categoryNameValue setText:self.categoryName.text];
+      NSLog(self.responseString);
+    
+    NSArray* resultsData = [responseString JSONValue];
+    
+	[responseString release];
+    
+    total = [resultsData count];
+    
+    resultsArray = [[NSMutableArray alloc] init]; 
+
+	for (int i = 0; i < total; i++){
+        //choose a random loan
+        NSDictionary* singleResult = [resultsData objectAtIndex:i];
+        
+        
+        NSString* name = [singleResult objectForKey:@"NAME"];
+        NSString* addressDetail = [singleResult objectForKey:@"ADDRESS"];
+        
+        [resultsArray addObject:name];
+ 
+    }
+ 
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
+{
+    static NSString *CellIdentifier = @"CustomTableCell";
+    
+    CustomTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        //cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CustomTableCell" owner:nil options:nil];
+        
+        for (id currentObject in topLevelObjects){
+            if([currentObject isKindOfClass:[UITableViewCell class]]){
+                cell = (CustomTableCell *) currentObject;
+                break;
+            }
+        }
+        
+    }
+    // Configure the cell.
+	cell.name.text = [resultsArray objectAtIndex:indexPath.row];
+    
+    return cell;
 }
 
 - (void)viewDidUnload

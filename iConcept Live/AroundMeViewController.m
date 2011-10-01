@@ -12,6 +12,8 @@
 @implementation AroundMeViewController
 @synthesize tableView;
 @synthesize categoryArray;
+@synthesize responseData;
+@synthesize responseString;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -98,19 +100,62 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    AroundMeResultsViewController *aroundmeResultsController = [[AroundMeResultsViewController alloc] init];
+    self.responseData = [NSMutableData data];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.iconceptpress.com/iconceptlive/getdata.php"]];
+    
+    [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+   // AroundMeResultsViewController *aroundmeResultsController = [[AroundMeResultsViewController alloc] init];
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
-    aroundmeResultsController.title = cell.textLabel.text;
-    //secondViewController.responseString = self.responseString;
+    //aroundmeResultsController.title = cell.textLabel.text;
+   
     
-    aroundmeResultsController.categoryName = cell.textLabel;
+    //aroundmeResultsController.categoryName = cell.textLabel;
+    
+    //[self.navigationController pushViewController:aroundmeResultsController animated:YES];
+ 
+    
+    //[aroundmeResultsController release];
+    
+    
+   
+}
+
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    [responseData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [responseData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+	[connection release];
+	self.responseData = nil;
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    [connection release];
+    self.responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    self.responseData = nil;
+    
+    AroundMeResultsViewController *aroundmeResultsController = [[AroundMeResultsViewController alloc] init];
+    aroundmeResultsController.title = @"Results";
+
+    aroundmeResultsController.responseString = self.responseString;
+    
     
     [self.navigationController pushViewController:aroundmeResultsController animated:YES];
-    // [self presentModalViewController:detailViewController animated:YES];
     
     [aroundmeResultsController release];
+    //NSLog(self.responseString);
+    
+    
+    
 }
 
 - (void)viewDidUnload

@@ -11,6 +11,7 @@
     UITabBar *myTabBar;
     UIViewController *currentViewController;
     IBOutlet UILabel *categoryName; 
+    NSString *responseString;
 }
 
 @property (nonatomic, retain) IBOutlet UITabBar *myTabBar;
@@ -18,6 +19,7 @@
 @property (nonatomic, retain) UIViewController *currentViewController;
 
 @property (nonatomic, retain) IBOutlet UILabel *categoryName;
+@property (retain, nonatomic) NSString* responseString;
 
 
 @end

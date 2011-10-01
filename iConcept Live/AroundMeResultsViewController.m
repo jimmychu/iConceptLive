@@ -15,6 +15,7 @@
 @synthesize myTabBar;
 @synthesize currentViewController;
 @synthesize categoryName;
+@synthesize responseString;
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
     
@@ -22,6 +23,7 @@
         NSLog(@"didSelectItem: %d", item.tag);
         AroundMeResults *resultsViewController = [[AroundMeResults alloc] initWithNibName:@"AroundMeResults" bundle:nil];
         
+        resultsViewController.responseString = self.responseString;
         [self.view insertSubview:resultsViewController.view belowSubview:myTabBar];
         
         if(currentViewController !=nil){
@@ -74,9 +76,9 @@
     
   
     AroundMeResults *resultsViewController = [[AroundMeResults alloc] initWithNibName:@"AroundMeResults" bundle:nil];;
-    resultsViewController.categoryName = self.categoryName;
+    resultsViewController.responseString = self.responseString;
     //resultsViewController.responseString = self.responseString;
-    // NSLog(self.responseString);
+   
     //resultsViewController.navController =  self.navigationController;
     [self.view insertSubview:resultsViewController.view belowSubview:myTabBar];
     

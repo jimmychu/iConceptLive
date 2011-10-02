@@ -11,10 +11,13 @@
 
 @interface CustomTableCell : UITableViewCell{
     IBOutlet UILabel *name;
+     IBOutlet UILabel *address;
     
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *name;
 
+
+@property (nonatomic, retain) IBOutlet UILabel *address;
 
 @end

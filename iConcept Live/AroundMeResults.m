@@ -15,6 +15,7 @@
 @synthesize categoryNameValue;
 @synthesize responseString;
 @synthesize resultsArray;
+@synthesize addressArray;
 @synthesize tableView;
 @synthesize total;
 
@@ -51,19 +52,37 @@
     total = [resultsData count];
     
     resultsArray = [[NSMutableArray alloc] init]; 
+    addressArray = [[NSMutableArray alloc] init];
 
 	for (int i = 0; i < total; i++){
         //choose a random loan
         NSDictionary* singleResult = [resultsData objectAtIndex:i];
         
-        
         NSString* name = [singleResult objectForKey:@"NAME"];
         NSString* addressDetail = [singleResult objectForKey:@"ADDRESS"];
-        
+        NSString* suburb = [singleResult objectForKey:@"SUBURB"];
+        NSString* state = [singleResult objectForKey:@"STATE"];
         [resultsArray addObject:name];
- 
+        addressDetail = [addressDetail stringByAppendingString:@", "];
+        addressDetail = [addressDetail stringByAppendingString:suburb];
+        addressDetail = [addressDetail stringByAppendingString:@", "];
+        addressDetail = [addressDetail stringByAppendingString:state];
+        [addressArray addObject:addressDetail];
+        NSLog(addressDetail);
     }
  
+}
+
+// Customize the number of sections in the table view.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView 
+{
+    return 1;
+}
+
+// Customize the number of rows in the table view.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
+{
+    return total;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
@@ -85,7 +104,9 @@
     }
     // Configure the cell.
 	cell.name.text = [resultsArray objectAtIndex:indexPath.row];
+    cell.address.text = [addressArray objectAtIndex:indexPath.row];
     
+      NSLog(cell.name.text);
     return cell;
 }
 

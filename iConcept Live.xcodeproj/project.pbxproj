@@ -14,6 +14,7 @@
 		DC89B837143745E800A35C7C /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DC89B832143745E800A35C7C /* SBJsonParser.m */; };
 		DC89B838143745E800A35C7C /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = DC89B834143745E800A35C7C /* SBJsonWriter.m */; };
 		DC89B83A143745F000A35C7C /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DC89B839143745F000A35C7C /* SBJsonBase.m */; };
+		DC89B83D14374E2200A35C7C /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DC89B83C14374E2200A35C7C /* arrow.png */; };
 		DCB6BE07142E012800DCA5F4 /* AroundMeMapResults.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB6BE01142E012800DCA5F4 /* AroundMeMapResults.m */; };
 		DCB6BE08142E012800DCA5F4 /* AroundMeMapResults.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB6BE02142E012800DCA5F4 /* AroundMeMapResults.xib */; };
 		DCB6BE09142E012800DCA5F4 /* AroundMeResults.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB6BE03142E012800DCA5F4 /* AroundMeResults.m */; };
@@ -52,6 +53,7 @@
 		DC89B834143745E800A35C7C /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		DC89B839143745F000A35C7C /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
 		DC89B83B143745F900A35C7C /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		DC89B83C14374E2200A35C7C /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		DCB6BE00142E012800DCA5F4 /* AroundMeMapResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AroundMeMapResults.h; sourceTree = "<group>"; };
 		DCB6BE01142E012800DCA5F4 /* AroundMeMapResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AroundMeMapResults.m; sourceTree = "<group>"; };
 		DCB6BE02142E012800DCA5F4 /* AroundMeMapResults.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AroundMeMapResults.xib; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		DCBC8AB714238C180067C0B4 /* iConcept Live */ = {
 			isa = PBXGroup;
 			children = (
+				DC89B83C14374E2200A35C7C /* arrow.png */,
 				DC89B83B143745F900A35C7C /* SBJsonBase.h */,
 				DC89B839143745F000A35C7C /* SBJsonBase.m */,
 				DC89B82D143745E700A35C7C /* NSObject+SBJSON.h */,
@@ -238,6 +241,7 @@
 				DCB6BE0A142E012800DCA5F4 /* AroundMeResults.xib in Resources */,
 				DCB6BE0B142E012800DCA5F4 /* AroundMeResultsViewController.xib in Resources */,
 				DC89B82A143742AE00A35C7C /* CustomTableCell.xib in Resources */,
+				DC89B83D14374E2200A35C7C /* arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

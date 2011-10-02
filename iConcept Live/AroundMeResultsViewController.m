@@ -36,7 +36,7 @@
         NSLog(@"didSelectItem: %d", item.tag);
         
         AroundMeMapResults *mapViewController = [[AroundMeMapResults alloc] initWithNibName:@"AroundMeMapResults" bundle:nil];
-        
+        mapViewController.responseString = self.responseString;
         [self.view insertSubview:mapViewController.view belowSubview:myTabBar];
         
         if(currentViewController !=nil){

@@ -14,6 +14,7 @@
     IBOutlet UILabel *categoryNameValue;
      NSString *responseString;
     NSMutableArray *resultsArray;
+      NSMutableArray *addressArray;
     int total;
      IBOutlet UITableView *tableView;
 }
@@ -22,6 +23,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *categoryNameValue;
 @property (retain, nonatomic) NSString* responseString;
 @property (nonatomic, retain) NSMutableArray	*resultsArray;
+@property (nonatomic, retain) NSMutableArray	*addressArray;
 @property int total;
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 @end

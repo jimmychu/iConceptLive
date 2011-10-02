@@ -9,6 +9,33 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface AroundMeMapResults : UIViewController
+
+@interface AddressAnnotation : NSObject <MKAnnotation>
+{
+    CLLocationCoordinate2D coordinate;
+    
+    NSString *title;
+    NSString *subtitle;
+    
+}
+-(NSString *)title;
+-(NSString *)subtitle;
+-(void) setTitle:(NSString *)titleValue;
+-(void) setSubTitle:(NSString *)subtitleValue;
+
+@end
+
+@interface AroundMeMapResults : UIViewController {
+    
+    MKMapView *mapView;    
+    NSMutableData* responseData;
+    AddressAnnotation *addAnnotation; 
+    NSString *responseString;
+    
+}
+@property (nonatomic, retain) IBOutlet MKMapView *mapView;
+@property (retain, nonatomic) NSMutableData* responseData;
+@property NSString *responseString;
+//- (IBAction)showAddress;
 
 @end

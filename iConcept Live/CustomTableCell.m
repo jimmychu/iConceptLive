@@ -10,6 +10,7 @@
 
 @implementation CustomTableCell
 @synthesize name;
+@synthesize address;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

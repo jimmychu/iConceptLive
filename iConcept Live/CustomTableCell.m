@@ -11,6 +11,7 @@
 @implementation CustomTableCell
 @synthesize name;
 @synthesize address;
+@synthesize retailerID;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

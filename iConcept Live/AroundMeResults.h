@@ -10,15 +10,16 @@
 
 
 @interface AroundMeResults : UIViewController{
-     IBOutlet UILabel *categoryName;
+    IBOutlet UILabel *categoryName;
     IBOutlet UILabel *categoryNameValue;
-     NSString *responseString;
+    NSString *responseString;
     NSMutableArray *resultsArray;
-      NSMutableArray *addressArray;
+    NSMutableArray *addressArray;
+    NSMutableArray *retailerIDArray;
     int total;
-     IBOutlet UITableView *tableView;
+    IBOutlet UITableView *tableView;
     UINavigationController *navController;
-     NSMutableData* responseData;
+    NSMutableData* responseData;
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *categoryName;
@@ -26,6 +27,7 @@
 @property (retain, nonatomic) NSString* responseString;
 @property (nonatomic, retain) NSMutableArray	*resultsArray;
 @property (nonatomic, retain) NSMutableArray	*addressArray;
+@property (nonatomic, retain) NSMutableArray	*retailerIDArray;
 @property int total;
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 @property (retain, nonatomic) NSMutableData* responseData;

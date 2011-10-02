@@ -53,7 +53,7 @@
         
     categoryArray = [[NSMutableArray alloc] init]; 
 	[categoryArray addObject:@"Restaurants"];
-    [categoryArray addObject:@"Pubs"];
+    [categoryArray addObject:@"Night Clubs"];
     [categoryArray addObject:@"Convenient Shops"];
     [categoryArray addObject:@"Health and Beauty"];
     [categoryArray addObject:@"Petrol Stations"];
@@ -101,24 +101,18 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     self.responseData = [NSMutableData data];
+     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    NSLog(cell.textLabel.text);
+    self.title = cell.textLabel.text;
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.iconceptpress.com/iconceptlive/getdata.php"]];
+    NSString *url = [@"http://www.iconceptpress.com/iconceptlive/getdata.php?category=" stringByAppendingString:cell.textLabel.text];
+    url = @"http://www.iconceptpress.com/iconceptlive/getdata.php?category=Night%20Clubs";
+    NSLog(url);
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    
+    
     
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
-   // AroundMeResultsViewController *aroundmeResultsController = [[AroundMeResultsViewController alloc] init];
-    
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    
-    //aroundmeResultsController.title = cell.textLabel.text;
-   
-    
-    //aroundmeResultsController.categoryName = cell.textLabel;
-    
-    //[self.navigationController pushViewController:aroundmeResultsController animated:YES];
- 
-    
-    //[aroundmeResultsController release];
     
     
    
@@ -144,7 +138,7 @@
     self.responseData = nil;
     
     AroundMeResultsViewController *aroundmeResultsController = [[AroundMeResultsViewController alloc] init];
-    aroundmeResultsController.title = @"Results";
+    aroundmeResultsController.title = self.title;
 
     aroundmeResultsController.responseString = self.responseString;
     

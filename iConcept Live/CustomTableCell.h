@@ -11,7 +11,8 @@
 
 @interface CustomTableCell : UITableViewCell{
     IBOutlet UILabel *name;
-     IBOutlet UILabel *address;
+    IBOutlet UILabel *address;
+    IBOutlet UILabel *retailerID;
     
 }
 
@@ -19,5 +20,6 @@
 
 
 @property (nonatomic, retain) IBOutlet UILabel *address;
+@property (nonatomic, retain) IBOutlet UILabel *retailerID;
 
 @end

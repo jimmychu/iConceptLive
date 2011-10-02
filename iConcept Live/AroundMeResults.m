@@ -17,6 +17,7 @@
 @synthesize responseString;
 @synthesize resultsArray;
 @synthesize addressArray;
+@synthesize retailerIDArray;
 @synthesize tableView;
 @synthesize total;
 @synthesize responseData;
@@ -56,11 +57,13 @@
     
     resultsArray = [[NSMutableArray alloc] init]; 
     addressArray = [[NSMutableArray alloc] init];
+    retailerIDArray = [[NSMutableArray alloc] init];
 
 	for (int i = 0; i < total; i++){
         //choose a random loan
         NSDictionary* singleResult = [resultsData objectAtIndex:i];
         
+        NSString* retailerID = [singleResult objectForKey:@"ID"];
         NSString* name = [singleResult objectForKey:@"NAME"];
         NSString* addressDetail = [singleResult objectForKey:@"ADDRESS"];
         NSString* suburb = [singleResult objectForKey:@"SUBURB"];
@@ -71,7 +74,9 @@
         addressDetail = [addressDetail stringByAppendingString:@", "];
         addressDetail = [addressDetail stringByAppendingString:state];
         [addressArray addObject:addressDetail];
+        [retailerIDArray addObject:retailerID];
         NSLog(addressDetail);
+       
     }
  
 }
@@ -108,22 +113,26 @@
     // Configure the cell.
 	cell.name.text = [resultsArray objectAtIndex:indexPath.row];
     cell.address.text = [addressArray objectAtIndex:indexPath.row];
-    
-      NSLog(cell.name.text);
-    return cell;
+    cell.retailerID.text = [retailerIDArray objectAtIndex:indexPath.row];
+    // NSLog(cell.retailerID.text);
+         return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     self.responseData = [NSMutableData data];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.iconceptpress.com/iconceptlive/getdata.php"]];
+    
+    CustomTableCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    
+    NSLog(cell.retailerID.text);
+    
+    NSString *url = [@"http://www.iconceptpress.com/iconceptlive/getdata.php?id=" stringByAppendingString:cell.retailerID.text];
+    NSLog(url);
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
-    // AroundMeResultsViewController *aroundmeResultsController = [[AroundMeResultsViewController alloc] init];
-    
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
   
     

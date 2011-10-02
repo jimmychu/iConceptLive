@@ -36,6 +36,12 @@
 		DCBC8AD214238D8B0067C0B4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCBC8AD014238D8B0067C0B4 /* HomeViewController.xib */; };
 		DCBC8AD6142393EF0067C0B4 /* AroundMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBC8AD4142393EF0067C0B4 /* AroundMeViewController.m */; };
 		DCBC8AD7142393EF0067C0B4 /* AroundMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCBC8AD5142393EF0067C0B4 /* AroundMeViewController.xib */; };
+		DCFFC1D114380F7100B3FF6D /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFFC1CF14380F7100B3FF6D /* DetailsViewController.m */; };
+		DCFFC1D214380F7100B3FF6D /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFFC1D014380F7100B3FF6D /* DetailsViewController.xib */; };
+		DCFFC1DB1438436A00B3FF6D /* Details.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFFC1D91438436A00B3FF6D /* Details.m */; };
+		DCFFC1DC1438436A00B3FF6D /* Details.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFFC1DA1438436A00B3FF6D /* Details.xib */; };
+		DCFFC1E014384B2E00B3FF6D /* DetailsMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFFC1DE14384B2E00B3FF6D /* DetailsMap.m */; };
+		DCFFC1E114384B2E00B3FF6D /* DetailsMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFFC1DF14384B2E00B3FF6D /* DetailsMap.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +90,15 @@
 		DCBC8AD3142393EF0067C0B4 /* AroundMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AroundMeViewController.h; sourceTree = "<group>"; };
 		DCBC8AD4142393EF0067C0B4 /* AroundMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AroundMeViewController.m; sourceTree = "<group>"; };
 		DCBC8AD5142393EF0067C0B4 /* AroundMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AroundMeViewController.xib; sourceTree = "<group>"; };
+		DCFFC1CE14380F7100B3FF6D /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		DCFFC1CF14380F7100B3FF6D /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		DCFFC1D014380F7100B3FF6D /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		DCFFC1D81438436A00B3FF6D /* Details.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Details.h; sourceTree = "<group>"; };
+		DCFFC1D91438436A00B3FF6D /* Details.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Details.m; sourceTree = "<group>"; };
+		DCFFC1DA1438436A00B3FF6D /* Details.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Details.xib; sourceTree = "<group>"; };
+		DCFFC1DD14384B2E00B3FF6D /* DetailsMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsMap.h; sourceTree = "<group>"; };
+		DCFFC1DE14384B2E00B3FF6D /* DetailsMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsMap.m; sourceTree = "<group>"; };
+		DCFFC1DF14384B2E00B3FF6D /* DetailsMap.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsMap.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +182,15 @@
 				DCBC8ACF14238D8B0067C0B4 /* HomeViewController.m */,
 				DCBC8AD3142393EF0067C0B4 /* AroundMeViewController.h */,
 				DCBC8AD4142393EF0067C0B4 /* AroundMeViewController.m */,
+				DCFFC1CE14380F7100B3FF6D /* DetailsViewController.h */,
+				DCFFC1CF14380F7100B3FF6D /* DetailsViewController.m */,
+				DCFFC1D81438436A00B3FF6D /* Details.h */,
+				DCFFC1D91438436A00B3FF6D /* Details.m */,
+				DCFFC1DD14384B2E00B3FF6D /* DetailsMap.h */,
+				DCFFC1DE14384B2E00B3FF6D /* DetailsMap.m */,
+				DCFFC1DF14384B2E00B3FF6D /* DetailsMap.xib */,
+				DCFFC1DA1438436A00B3FF6D /* Details.xib */,
+				DCFFC1D014380F7100B3FF6D /* DetailsViewController.xib */,
 				DCBC8AD5142393EF0067C0B4 /* AroundMeViewController.xib */,
 				DCBC8AD014238D8B0067C0B4 /* HomeViewController.xib */,
 				DCBC8AC614238C190067C0B4 /* iConcept_Live.xcdatamodeld */,
@@ -242,6 +266,9 @@
 				DCB6BE0B142E012800DCA5F4 /* AroundMeResultsViewController.xib in Resources */,
 				DC89B82A143742AE00A35C7C /* CustomTableCell.xib in Resources */,
 				DC89B83D14374E2200A35C7C /* arrow.png in Resources */,
+				DCFFC1D214380F7100B3FF6D /* DetailsViewController.xib in Resources */,
+				DCFFC1DC1438436A00B3FF6D /* Details.xib in Resources */,
+				DCFFC1E114384B2E00B3FF6D /* DetailsMap.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +293,9 @@
 				DC89B837143745E800A35C7C /* SBJsonParser.m in Sources */,
 				DC89B838143745E800A35C7C /* SBJsonWriter.m in Sources */,
 				DC89B83A143745F000A35C7C /* SBJsonBase.m in Sources */,
+				DCFFC1D114380F7100B3FF6D /* DetailsViewController.m in Sources */,
+				DCFFC1DB1438436A00B3FF6D /* Details.m in Sources */,
+				DCFFC1E014384B2E00B3FF6D /* DetailsMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

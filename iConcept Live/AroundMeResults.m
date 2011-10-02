@@ -9,6 +9,7 @@
 #import "AroundMeResults.h"
 #import "JSON.h"
 #import "CustomTableCell.h"
+#import "DetailsViewController.h"
 
 @implementation AroundMeResults
 @synthesize categoryName;
@@ -18,6 +19,8 @@
 @synthesize addressArray;
 @synthesize tableView;
 @synthesize total;
+@synthesize responseData;
+@synthesize navController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -108,6 +111,55 @@
     
       NSLog(cell.name.text);
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    self.responseData = [NSMutableData data];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.iconceptpress.com/iconceptlive/getdata.php"]];
+    
+    [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+    // AroundMeResultsViewController *aroundmeResultsController = [[AroundMeResultsViewController alloc] init];
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+  
+    
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    [responseData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [responseData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+	[connection release];
+	self.responseData = nil;
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    [connection release];
+    self.responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    self.responseData = nil;
+    
+    DetailsViewController *detailsController = [[DetailsViewController alloc] init];
+    detailsController.title = @"Details";
+    
+    detailsController.responseString = self.responseString;
+    
+    
+    [self.navController pushViewController:detailsController animated:YES];
+    
+    [detailsController release];
+    //NSLog(self.responseString);
+    
+    
+    
 }
 
 - (void)viewDidUnload

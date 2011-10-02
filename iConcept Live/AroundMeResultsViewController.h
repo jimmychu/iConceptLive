@@ -12,6 +12,7 @@
     UIViewController *currentViewController;
     IBOutlet UILabel *categoryName; 
     NSString *responseString;
+     UINavigationController *navController;
 }
 
 @property (nonatomic, retain) IBOutlet UITabBar *myTabBar;
@@ -20,6 +21,7 @@
 
 @property (nonatomic, retain) IBOutlet UILabel *categoryName;
 @property (retain, nonatomic) NSString* responseString;
+@property (nonatomic, retain) UINavigationController *navController;
 
 
 @end

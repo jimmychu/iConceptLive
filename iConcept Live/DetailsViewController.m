@@ -1,50 +1,56 @@
 //
-//  AroundMeResultsController.m
+//  DetailsViewController.m
 //  iConcept Live
 //
-//  Created by Jia Zhu on 24/09/11.
+//  Created by Jia Zhu on 2/10/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "AroundMeResultsViewController.h"
-#import "AroundMeResults.h"
-#import "AroundMeMapResults.h"
+#import "DetailsViewController.h"
+#import "Details.h"
+#import "DetailsMap.h"
 
+@implementation DetailsViewController
 
-@implementation AroundMeResultsViewController
-@synthesize myTabBar;
+@synthesize myTabBar1;
 @synthesize currentViewController;
-@synthesize categoryName;
+@synthesize RETAILERID;
 @synthesize responseString;
-@synthesize navController;
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
     
     if(item.tag == 0){
         NSLog(@"didSelectItem: %d", item.tag);
-        AroundMeResults *resultsViewController = [[AroundMeResults alloc] initWithNibName:@"AroundMeResults" bundle:nil];
         
-        resultsViewController.responseString = self.responseString;
-        [self.view insertSubview:resultsViewController.view belowSubview:myTabBar];
+        Details *detailsViewController = [[Details alloc] initWithNibName:@"Details" bundle:nil];
+        
+        
+        detailsViewController.RETAILERID = self.responseString;
+        
+        [self.view insertSubview:detailsViewController.view belowSubview:myTabBar1];
+     
         
         if(currentViewController !=nil){
             [currentViewController.view removeFromSuperview];
-            currentViewController = resultsViewController;
+            currentViewController = detailsViewController;
         }
     }
-    
+
     if(item.tag == 1){
         NSLog(@"didSelectItem: %d", item.tag);
         
-        AroundMeMapResults *mapViewController = [[AroundMeMapResults alloc] initWithNibName:@"AroundMeMapResults" bundle:nil];
-        mapViewController.responseString = self.responseString;
-        [self.view insertSubview:mapViewController.view belowSubview:myTabBar];
+        DetailsMap *detailmap = [[DetailsMap alloc] initWithNibName:@"DetailsMap" bundle:nil];;
+        
+        detailmap.RETAILERID = self.responseString;
+        [self.view insertSubview:detailmap.view belowSubview:myTabBar1];
+        
         
         if(currentViewController !=nil){
             [currentViewController.view removeFromSuperview];
-            currentViewController = mapViewController;
+            currentViewController = detailmap;
         }
     }
+    
     
 }
 
@@ -70,21 +76,19 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    
-    NSLog(@"I AM IN SECOND VIEW NOW !");
-   // NSLog(self.categoryName.text);
-    
-  
-    AroundMeResults *resultsViewController = [[AroundMeResults alloc] initWithNibName:@"AroundMeResults" bundle:nil];;
-    resultsViewController.responseString = self.responseString;
     
    
-    resultsViewController.navController = self.navController;
-    [self.view insertSubview:resultsViewController.view belowSubview:myTabBar];
+    [super viewDidLoad];
+    NSLog(@"I AM IN detail VIEW NOW !");
+    Details *detailsViewController = [[Details alloc] initWithNibName:@"Details" bundle:nil];
     
+    
+    detailsViewController.RETAILERID = self.responseString;
 
-
+    [self.view insertSubview:detailsViewController.view belowSubview:myTabBar1];
+    
+    
+    
     
 }
 

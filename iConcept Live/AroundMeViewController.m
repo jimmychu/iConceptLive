@@ -148,7 +148,7 @@
 
     aroundmeResultsController.responseString = self.responseString;
     
-    
+    aroundmeResultsController.navController = self.navigationController;
     [self.navigationController pushViewController:aroundmeResultsController animated:YES];
     
     [aroundmeResultsController release];

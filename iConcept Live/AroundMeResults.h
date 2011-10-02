@@ -17,6 +17,8 @@
       NSMutableArray *addressArray;
     int total;
      IBOutlet UITableView *tableView;
+    UINavigationController *navController;
+     NSMutableData* responseData;
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *categoryName;
@@ -26,6 +28,8 @@
 @property (nonatomic, retain) NSMutableArray	*addressArray;
 @property int total;
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property (retain, nonatomic) NSMutableData* responseData;
+@property (nonatomic, retain) UINavigationController *navController;
 @end
 
 

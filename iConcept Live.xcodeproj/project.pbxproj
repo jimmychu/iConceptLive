@@ -36,6 +36,7 @@
 		DCBC8AD214238D8B0067C0B4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCBC8AD014238D8B0067C0B4 /* HomeViewController.xib */; };
 		DCBC8AD6142393EF0067C0B4 /* AroundMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBC8AD4142393EF0067C0B4 /* AroundMeViewController.m */; };
 		DCBC8AD7142393EF0067C0B4 /* AroundMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCBC8AD5142393EF0067C0B4 /* AroundMeViewController.xib */; };
+		DCC1C49A143B2D6900E90D06 /* great deals.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC1C499143B2D6900E90D06 /* great deals.png */; };
 		DCFFC1D114380F7100B3FF6D /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFFC1CF14380F7100B3FF6D /* DetailsViewController.m */; };
 		DCFFC1D214380F7100B3FF6D /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFFC1D014380F7100B3FF6D /* DetailsViewController.xib */; };
 		DCFFC1DB1438436A00B3FF6D /* Details.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFFC1D91438436A00B3FF6D /* Details.m */; };
@@ -90,6 +91,7 @@
 		DCBC8AD3142393EF0067C0B4 /* AroundMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AroundMeViewController.h; sourceTree = "<group>"; };
 		DCBC8AD4142393EF0067C0B4 /* AroundMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AroundMeViewController.m; sourceTree = "<group>"; };
 		DCBC8AD5142393EF0067C0B4 /* AroundMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AroundMeViewController.xib; sourceTree = "<group>"; };
+		DCC1C499143B2D6900E90D06 /* great deals.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "great deals.png"; sourceTree = "<group>"; };
 		DCFFC1CE14380F7100B3FF6D /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		DCFFC1CF14380F7100B3FF6D /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		DCFFC1D014380F7100B3FF6D /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				DC89B83C14374E2200A35C7C /* arrow.png */,
+				DCC1C499143B2D6900E90D06 /* great deals.png */,
 				DC89B83B143745F900A35C7C /* SBJsonBase.h */,
 				DC89B839143745F000A35C7C /* SBJsonBase.m */,
 				DC89B82D143745E700A35C7C /* NSObject+SBJSON.h */,
@@ -269,6 +272,7 @@
 				DCFFC1D214380F7100B3FF6D /* DetailsViewController.xib in Resources */,
 				DCFFC1DC1438436A00B3FF6D /* Details.xib in Resources */,
 				DCFFC1E114384B2E00B3FF6D /* DetailsMap.xib in Resources */,
+				DCC1C49A143B2D6900E90D06 /* great deals.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

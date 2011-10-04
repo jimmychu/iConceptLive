@@ -25,6 +25,7 @@
         AroundMeResults *resultsViewController = [[AroundMeResults alloc] initWithNibName:@"AroundMeResults" bundle:nil];
         
         resultsViewController.responseString = self.responseString;
+          resultsViewController.navController = self.navController;
         [self.view insertSubview:resultsViewController.view belowSubview:myTabBar];
         
         if(currentViewController !=nil){

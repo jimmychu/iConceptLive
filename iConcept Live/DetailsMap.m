@@ -82,7 +82,7 @@
     [addAnnotation setTitle:name];
     [addAnnotation setSubTitle:addressDetail];
     region.center=location;
-    [address addObject:addAnnotation];
+    [address addObject:addAnnotation]; 
     
     [mapView addAnnotations:address];
     

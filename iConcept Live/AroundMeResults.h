@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-
+//results tab controller
 @interface AroundMeResults : UIViewController{
-    IBOutlet UILabel *categoryName;
-    IBOutlet UILabel *categoryNameValue;
     NSString *responseString;
     NSMutableArray *resultsArray;
     NSMutableArray *addressArray;
@@ -22,8 +20,6 @@
     NSMutableData* responseData;
 }
 
-@property (nonatomic, retain) IBOutlet UILabel *categoryName;
-@property (nonatomic, retain) IBOutlet UILabel *categoryNameValue;
 @property (retain, nonatomic) NSString* responseString;
 @property (nonatomic, retain) NSMutableArray	*resultsArray;
 @property (nonatomic, retain) NSMutableArray	*addressArray;

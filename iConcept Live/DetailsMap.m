@@ -19,9 +19,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        
-        //[mapView selectAnnotation:mLodgeAnnotation animated:YES];
-        
     }
     return self;
 }
@@ -60,21 +57,12 @@
     
     NSMutableArray *address = [[NSMutableArray alloc] init];
     
-    if (mapView == nil){
-        NSLog(@"Map Status: %s", "nil");
-        
-    }
-    
-    
     if(addAnnotation != nil)
     {
         [mapView removeAnnotation:addAnnotation];
         [addAnnotation release];
         addAnnotation = nil;
     }
-    //choose a random loan
-    
-    
     
     NSDictionary* singleResult = [maplocations objectAtIndex:0];
     
@@ -95,9 +83,6 @@
     [addAnnotation setSubTitle:addressDetail];
     region.center=location;
     [address addObject:addAnnotation];
-    
-    
-    
     
     [mapView addAnnotations:address];
     

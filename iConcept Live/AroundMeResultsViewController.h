@@ -6,21 +6,20 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-
+//aroundme results view to hold tab bar
 @interface AroundMeResultsViewController : UIViewController <UITabBarDelegate>{
     UITabBar *myTabBar;
-    UIViewController *currentViewController;
-    IBOutlet UILabel *categoryName; 
+    UIViewController *currentViewController; //get track with current tab view controller
     NSString *responseString;
-     UINavigationController *navController;
+    UINavigationController *navController;
 }
 
 @property (nonatomic, retain) IBOutlet UITabBar *myTabBar;
 
 @property (nonatomic, retain) UIViewController *currentViewController;
 
-@property (nonatomic, retain) IBOutlet UILabel *categoryName;
 @property (retain, nonatomic) NSString* responseString;
+
 @property (nonatomic, retain) UINavigationController *navController;
 
 

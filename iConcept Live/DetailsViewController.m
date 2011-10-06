@@ -17,6 +17,7 @@
 @synthesize RETAILERID;
 @synthesize responseString;
 
+//details view tab controller for this retailer
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
     
     if(item.tag == 0){
@@ -82,13 +83,9 @@
     NSLog(@"I AM IN detail VIEW NOW !");
     Details *detailsViewController = [[Details alloc] initWithNibName:@"Details" bundle:nil];
     
-    
     detailsViewController.RETAILERID = self.responseString;
 
     [self.view insertSubview:detailsViewController.view belowSubview:myTabBar1];
-    
-    
-    
     
 }
 

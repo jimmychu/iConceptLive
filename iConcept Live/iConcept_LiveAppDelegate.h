@@ -10,10 +10,7 @@
 
 @interface iConcept_LiveAppDelegate : NSObject <UIApplicationDelegate>{
     UIWindow *window;
-    UINavigationController *navController;
-    
-    
-    
+    UINavigationController *navController; //navigation controller
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

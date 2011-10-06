@@ -56,7 +56,6 @@
     addressDetail = [addressDetail stringByAppendingString:STATE];
     addressDetail = [addressDetail stringByAppendingString:@", "];
     addressDetail = [addressDetail stringByAppendingString:POSTCODE];
-     NSLog(HOMEPAGEURL);
     
     [self.RETAILERINFO setText:name];
     [self.RETAILERADDRESS setText:addressDetail];

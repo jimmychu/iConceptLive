@@ -20,14 +20,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
     if (self) {
-        // Custom initialization
-        
-        //php file url to call
-        
-        // NSLog(self.responseString);
-        
-        
-        
     }
     return self;
 }
@@ -61,10 +53,7 @@
     [categoryArray addObject:@"Hotels"];
     [categoryArray addObject:@"Fruit Shops"];
     [categoryArray addObject:@"Supermarkets"];
-    [categoryArray addObject:@"After Hours"];
-    
-    
-    
+    [categoryArray addObject:@"After Hours"];    
 }
 
 
@@ -79,7 +68,6 @@
 {
     return 10;
 }
-
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
@@ -101,16 +89,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     self.responseData = [NSMutableData data];
-     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    NSLog(cell.textLabel.text);
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+  
     self.title = cell.textLabel.text;
     
+    //Get data from remote server
     NSString *url = [@"http://www.iconceptpress.com/iconceptlive/getdata.php?category=" stringByAppendingString:cell.textLabel.text];
+    
+    //space issue, need to fix...
     url = @"http://www.iconceptpress.com/iconceptlive/getdata.php?category=Night%20Clubs";
-    NSLog(url);
+   
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
-    
-    
     
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
     
@@ -135,20 +124,17 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     [connection release];
     self.responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    self.responseData = nil;
+    self.responseData = nil; //release the data
     
     AroundMeResultsViewController *aroundmeResultsController = [[AroundMeResultsViewController alloc] init];
     aroundmeResultsController.title = self.title;
 
     aroundmeResultsController.responseString = self.responseString;
     
-    aroundmeResultsController.navController = self.navigationController;
+    aroundmeResultsController.navController = self.navigationController; //record navigation controller
     [self.navigationController pushViewController:aroundmeResultsController animated:YES];
     
     [aroundmeResultsController release];
-    //NSLog(self.responseString);
-    
-    
     
 }
 

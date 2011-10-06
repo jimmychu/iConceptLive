@@ -8,15 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+//around me control screen, aroundme is a flow to display retailers around user current location
 @interface AroundMeViewController : UIViewController <UITabBarDelegate>{
-   IBOutlet UITableView *tableView;
-    NSMutableArray *categoryArray;
-    NSMutableData* responseData;
+    IBOutlet UITableView *tableView;
+    
+    NSMutableArray *categoryArray; //display retailer category
+    
+    NSMutableData* responseData; //use to store data from server
+    
     NSString *responseString;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
-@property (nonatomic, retain)			NSMutableArray	*categoryArray;
+@property (nonatomic, retain) NSMutableArray *categoryArray;
 @property (retain, nonatomic) NSString* responseString;
 @property (retain, nonatomic) NSMutableData* responseData;
+
 @end

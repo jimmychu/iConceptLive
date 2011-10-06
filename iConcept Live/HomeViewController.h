@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+//The first screen of the application
 @interface HomeViewController : UIViewController{
 
 }

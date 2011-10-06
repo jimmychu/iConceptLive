@@ -12,8 +12,6 @@
 #import "DetailsViewController.h"
 
 @implementation AroundMeResults
-@synthesize categoryName;
-@synthesize categoryNameValue;
 @synthesize responseString;
 @synthesize resultsArray;
 @synthesize addressArray;
@@ -45,9 +43,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
-      NSLog(self.responseString);
     
     NSArray* resultsData = [responseString JSONValue];
     
@@ -74,9 +69,7 @@
         addressDetail = [addressDetail stringByAppendingString:@", "];
         addressDetail = [addressDetail stringByAppendingString:state];
         [addressArray addObject:addressDetail];
-        [retailerIDArray addObject:retailerID];
-        NSLog(addressDetail);
-       
+        [retailerIDArray addObject:retailerID]; //store retailerid
     }
  
 }
@@ -99,7 +92,7 @@
     
     CustomTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        //cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+       
         NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CustomTableCell" owner:nil options:nil];
         
         for (id currentObject in topLevelObjects){
@@ -114,7 +107,6 @@
 	cell.name.text = [resultsArray objectAtIndex:indexPath.row];
     cell.address.text = [addressArray objectAtIndex:indexPath.row];
     cell.retailerID.text = [retailerIDArray objectAtIndex:indexPath.row];
-    // NSLog(cell.retailerID.text);
          return cell;
 }
 
@@ -122,14 +114,10 @@
     
     self.responseData = [NSMutableData data];
     
-    
     CustomTableCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
-    
-    NSLog(cell.retailerID.text);
-    
     NSString *url = [@"http://www.iconceptpress.com/iconceptlive/getdata.php?id=" stringByAppendingString:cell.retailerID.text];
-    NSLog(url);
+
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
@@ -162,13 +150,9 @@
     detailsController.responseString = self.responseString;
     
     
-    [self.navController pushViewController:detailsController animated:YES];
+    [self.navController pushViewController:detailsController animated:YES]; //push to details view of this retailer
     
     [detailsController release];
-    //NSLog(self.responseString);
-    
-    
-    
 }
 
 - (void)viewDidUnload

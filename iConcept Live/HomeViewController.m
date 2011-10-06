@@ -12,9 +12,10 @@
 @implementation HomeViewController
 
 - (IBAction)pushViewController:(id)sender{
+    //send to next view
     AroundMeViewController *aroundmeViewController = [[AroundMeViewController alloc] init];
     aroundmeViewController.title = @"Around Me";
-     [self.navigationController pushViewController:aroundmeViewController animated:YES];
+    [self.navigationController pushViewController:aroundmeViewController animated:YES];
     [aroundmeViewController release];
     
 }

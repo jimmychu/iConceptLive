@@ -14,7 +14,6 @@
 @implementation AroundMeResultsViewController
 @synthesize myTabBar;
 @synthesize currentViewController;
-@synthesize categoryName;
 @synthesize responseString;
 @synthesize navController;
 
@@ -25,7 +24,7 @@
         AroundMeResults *resultsViewController = [[AroundMeResults alloc] initWithNibName:@"AroundMeResults" bundle:nil];
         
         resultsViewController.responseString = self.responseString;
-          resultsViewController.navController = self.navController;
+        resultsViewController.navController = self.navController;
         [self.view insertSubview:resultsViewController.view belowSubview:myTabBar];
         
         if(currentViewController !=nil){
@@ -54,7 +53,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
     }
     return self;
 }
@@ -74,18 +72,13 @@
     [super viewDidLoad];
     
     NSLog(@"I AM IN SECOND VIEW NOW !");
-   // NSLog(self.categoryName.text);
     
-  
     AroundMeResults *resultsViewController = [[AroundMeResults alloc] initWithNibName:@"AroundMeResults" bundle:nil];;
     resultsViewController.responseString = self.responseString;
     
    
     resultsViewController.navController = self.navController;
     [self.view insertSubview:resultsViewController.view belowSubview:myTabBar];
-    
-
-
     
 }
 

@@ -18,10 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
-        
-        //[mapView selectAnnotation:mLodgeAnnotation animated:YES];
-        
+
     }
     return self;
 }
@@ -60,11 +57,6 @@
     
     NSMutableArray *address = [[NSMutableArray alloc] init];
     
-    if (mapView == nil){
-        NSLog(@"Map Status: %s", "nil");
-        
-    }
-    
     for (int i = 0; i < [maplocations count]; i++){
         
         if(addAnnotation != nil)
@@ -82,8 +74,6 @@
         
         NSString* name = [maplocation objectForKey:@"NAME"];
         NSString* addressDetail = [maplocation objectForKey:@"ADDRESS"];
-        // NSLog(@"map location: %f", longitude.floatValue );
-        // NSLog(@"map location: %@", name );
         
         location.longitude = longitude.floatValue;
         location.latitude = latitude.floatValue;

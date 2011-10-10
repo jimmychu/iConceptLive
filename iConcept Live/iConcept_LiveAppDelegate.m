@@ -20,7 +20,7 @@
     
     
     HomeViewController *homeViewController = [[HomeViewController alloc] init];
-    homeViewController.title = @"iConcept Live";
+    homeViewController.title = @"iConcept Life";
     [navController pushViewController:homeViewController animated:YES];
     [homeViewController release];
     

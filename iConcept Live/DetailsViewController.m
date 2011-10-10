@@ -9,6 +9,8 @@
 #import "DetailsViewController.h"
 #import "Details.h"
 #import "DetailsMap.h"
+#import "CommentsViewController.h"
+#import "CommentsInputViewController.h"
 
 @implementation DetailsViewController
 
@@ -16,6 +18,8 @@
 @synthesize currentViewController;
 @synthesize RETAILERID;
 @synthesize responseString;
+@synthesize responseData;
+@synthesize navController;
 
 //details view tab controller for this retailer
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
@@ -52,6 +56,44 @@
         }
     }
     
+    if(item.tag == 2){
+        NSLog(@"didSelectItem: %d", item.tag);
+        
+        NSString *url = @"http://www.iconceptpress.com/iconceptlive/getcomments.php";
+        
+        self.responseData = [NSMutableData data];
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+        [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+    }
+    
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    [responseData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [responseData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+	[connection release];
+	self.responseData = nil;
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    [connection release];
+    
+    self.responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    self.responseData = nil;
+    
+    // NSLog(self.responseString);
+    CommentsViewController *comments = [[CommentsViewController alloc] initWithNibName:@"CommentsViewController" bundle:nil];;
+    comments.responseString = self.responseString;
+    
+    [self.view insertSubview:comments.view belowSubview:myTabBar1];
+    [comments release];
     
 }
 
@@ -85,7 +127,27 @@
     
     detailsViewController.RETAILERID = self.responseString;
 
+    
+    UIImage *image = [UIImage imageNamed:@"Comments.png"];
+    UIBarButtonItem *button2 = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(myCommentsButtonClicked)];
+    
+    
+    self.navigationItem.rightBarButtonItem = button2;
+    
+    [button2 release];
+  
     [self.view insertSubview:detailsViewController.view belowSubview:myTabBar1];
+    
+}
+
+
+-(void)myCommentsButtonClicked {
+    
+    CommentsInputViewController *myCommentsVC = [[CommentsInputViewController alloc] initWithNibName:@"CommentsInputViewController" bundle:nil];
+    //Exception thrown at line below
+    [self.navController pushViewController:myCommentsVC animated:YES];
+    
+    [myCommentsVC release];
     
 }
 

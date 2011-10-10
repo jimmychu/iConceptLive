@@ -14,6 +14,11 @@
    
     NSString *responseString;
     NSString *RETAILERID;
+    
+    UINavigationController *navController;
+    
+    NSMutableData* responseData;
+  
 }
 
 @property (nonatomic, retain) IBOutlet UITabBar *myTabBar1;
@@ -24,4 +29,12 @@
 @property (retain, nonatomic)  NSString *RETAILERID;
 
 
+@property (nonatomic, retain) UIViewController *navController;
+
+@property (retain, nonatomic) NSMutableData* responseData;
+
+
+
 @end
+
+

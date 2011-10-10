@@ -117,7 +117,7 @@
     CustomTableCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
     NSString *url = [@"http://www.iconceptpress.com/iconceptlive/getdata.php?id=" stringByAppendingString:cell.retailerID.text];
-
+  
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
@@ -148,7 +148,7 @@
     detailsController.title = @"Details";
     
     detailsController.responseString = self.responseString;
-    
+    detailsController.navController = self.navController;
     
     [self.navController pushViewController:detailsController animated:YES]; //push to details view of this retailer
     

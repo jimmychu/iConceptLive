@@ -96,7 +96,7 @@
     //Get data from remote server
     NSString *url = [@"http://www.iconceptpress.com/iconceptlive/getdata.php?category=" stringByAppendingString:cell.textLabel.text];
     
-    //space issue, need to fix...
+    //space issue, need to fix........
     url = @"http://www.iconceptpress.com/iconceptlive/getdata.php?category=Night%20Clubs";
    
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];

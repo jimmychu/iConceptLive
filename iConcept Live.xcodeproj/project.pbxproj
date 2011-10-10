@@ -37,6 +37,11 @@
 		DCBC8AD6142393EF0067C0B4 /* AroundMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBC8AD4142393EF0067C0B4 /* AroundMeViewController.m */; };
 		DCBC8AD7142393EF0067C0B4 /* AroundMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCBC8AD5142393EF0067C0B4 /* AroundMeViewController.xib */; };
 		DCC1C49A143B2D6900E90D06 /* great deals.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC1C499143B2D6900E90D06 /* great deals.png */; };
+		DCC775791443181400A5A40F /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC775771443181400A5A40F /* CommentsViewController.m */; };
+		DCC7757A1443181400A5A40F /* CommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC775781443181400A5A40F /* CommentsViewController.xib */; };
+		DCC7757D14431CEF00A5A40F /* Comments.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC7757C14431CEF00A5A40F /* Comments.png */; };
+		DCC7758114431D1F00A5A40F /* CommentsInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC7757F14431D1F00A5A40F /* CommentsInputViewController.m */; };
+		DCC7758214431D1F00A5A40F /* CommentsInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC7758014431D1F00A5A40F /* CommentsInputViewController.xib */; };
 		DCFFC1D114380F7100B3FF6D /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFFC1CF14380F7100B3FF6D /* DetailsViewController.m */; };
 		DCFFC1D214380F7100B3FF6D /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFFC1D014380F7100B3FF6D /* DetailsViewController.xib */; };
 		DCFFC1DB1438436A00B3FF6D /* Details.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFFC1D91438436A00B3FF6D /* Details.m */; };
@@ -92,6 +97,13 @@
 		DCBC8AD4142393EF0067C0B4 /* AroundMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AroundMeViewController.m; sourceTree = "<group>"; };
 		DCBC8AD5142393EF0067C0B4 /* AroundMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AroundMeViewController.xib; sourceTree = "<group>"; };
 		DCC1C499143B2D6900E90D06 /* great deals.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "great deals.png"; sourceTree = "<group>"; };
+		DCC775761443181400A5A40F /* CommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsViewController.h; sourceTree = "<group>"; };
+		DCC775771443181400A5A40F /* CommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsViewController.m; sourceTree = "<group>"; };
+		DCC775781443181400A5A40F /* CommentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsViewController.xib; sourceTree = "<group>"; };
+		DCC7757C14431CEF00A5A40F /* Comments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Comments.png; sourceTree = "<group>"; };
+		DCC7757E14431D1F00A5A40F /* CommentsInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsInputViewController.h; sourceTree = "<group>"; };
+		DCC7757F14431D1F00A5A40F /* CommentsInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsInputViewController.m; sourceTree = "<group>"; };
+		DCC7758014431D1F00A5A40F /* CommentsInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsInputViewController.xib; sourceTree = "<group>"; };
 		DCFFC1CE14380F7100B3FF6D /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		DCFFC1CF14380F7100B3FF6D /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		DCFFC1D014380F7100B3FF6D /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
@@ -153,6 +165,7 @@
 		DCBC8AB714238C180067C0B4 /* iConcept Live */ = {
 			isa = PBXGroup;
 			children = (
+				DCC7757C14431CEF00A5A40F /* Comments.png */,
 				DC89B83C14374E2200A35C7C /* arrow.png */,
 				DCC1C499143B2D6900E90D06 /* great deals.png */,
 				DC89B83B143745F900A35C7C /* SBJsonBase.h */,
@@ -187,12 +200,18 @@
 				DCBC8AD4142393EF0067C0B4 /* AroundMeViewController.m */,
 				DCFFC1CE14380F7100B3FF6D /* DetailsViewController.h */,
 				DCFFC1CF14380F7100B3FF6D /* DetailsViewController.m */,
+				DCC7757E14431D1F00A5A40F /* CommentsInputViewController.h */,
+				DCC7757F14431D1F00A5A40F /* CommentsInputViewController.m */,
+				DCC7758014431D1F00A5A40F /* CommentsInputViewController.xib */,
 				DCFFC1D81438436A00B3FF6D /* Details.h */,
 				DCFFC1D91438436A00B3FF6D /* Details.m */,
 				DCFFC1DD14384B2E00B3FF6D /* DetailsMap.h */,
 				DCFFC1DE14384B2E00B3FF6D /* DetailsMap.m */,
 				DCFFC1DF14384B2E00B3FF6D /* DetailsMap.xib */,
 				DCFFC1DA1438436A00B3FF6D /* Details.xib */,
+				DCC775761443181400A5A40F /* CommentsViewController.h */,
+				DCC775771443181400A5A40F /* CommentsViewController.m */,
+				DCC775781443181400A5A40F /* CommentsViewController.xib */,
 				DCFFC1D014380F7100B3FF6D /* DetailsViewController.xib */,
 				DCBC8AD5142393EF0067C0B4 /* AroundMeViewController.xib */,
 				DCBC8AD014238D8B0067C0B4 /* HomeViewController.xib */,
@@ -273,6 +292,9 @@
 				DCFFC1DC1438436A00B3FF6D /* Details.xib in Resources */,
 				DCFFC1E114384B2E00B3FF6D /* DetailsMap.xib in Resources */,
 				DCC1C49A143B2D6900E90D06 /* great deals.png in Resources */,
+				DCC7757A1443181400A5A40F /* CommentsViewController.xib in Resources */,
+				DCC7757D14431CEF00A5A40F /* Comments.png in Resources */,
+				DCC7758214431D1F00A5A40F /* CommentsInputViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +322,8 @@
 				DCFFC1D114380F7100B3FF6D /* DetailsViewController.m in Sources */,
 				DCFFC1DB1438436A00B3FF6D /* Details.m in Sources */,
 				DCFFC1E014384B2E00B3FF6D /* DetailsMap.m in Sources */,
+				DCC775791443181400A5A40F /* CommentsViewController.m in Sources */,
+				DCC7758114431D1F00A5A40F /* CommentsInputViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -45,7 +45,7 @@
         
     categoryArray = [[NSMutableArray alloc] init]; 
 	[categoryArray addObject:@"Restaurants"];
-    [categoryArray addObject:@"Night Clubs"];
+    [categoryArray addObject:@"Bars and Clubs"];
     [categoryArray addObject:@"Convenient Shops"];
     [categoryArray addObject:@"Health and Beauty"];
     [categoryArray addObject:@"Petrol Stations"];
@@ -53,7 +53,7 @@
     [categoryArray addObject:@"Hotels"];
     [categoryArray addObject:@"Fruit Shops"];
     [categoryArray addObject:@"Supermarkets"];
-    [categoryArray addObject:@"After Hours"];    
+     
 }
 
 
@@ -66,7 +66,7 @@
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
-    return 10;
+    return 9;
 }
 
 
@@ -95,9 +95,12 @@
     
     //Get data from remote server
     NSString *url = [@"http://www.iconceptpress.com/iconceptlive/getdata.php?category=" stringByAppendingString:cell.textLabel.text];
+   
     
-    //space issue, need to fix........
-    url = @"http://www.iconceptpress.com/iconceptlive/getdata.php?category=Night%20Clubs";
+    url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    NSLog(url);
+    
    
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     

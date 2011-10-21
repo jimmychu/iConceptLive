@@ -14,7 +14,7 @@
 @synthesize responseString;
 @synthesize total;
 @synthesize resultsArray;
-@synthesize tableView;
+@synthesize tableView1;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

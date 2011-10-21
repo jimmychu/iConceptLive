@@ -93,7 +93,7 @@
     comments.responseString = self.responseString;
     
     [self.view insertSubview:comments.view belowSubview:myTabBar1];
-    [comments release];
+//[comments release];
     
 }
 

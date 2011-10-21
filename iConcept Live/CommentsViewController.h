@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface CommentsViewController : UIViewController{
-    IBOutlet UITableView *tableView;
+    IBOutlet UITableView *tableView1;
     NSString *responseString;
     int total;
     NSMutableArray *resultsArray;
 }
-@property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property (nonatomic, retain) IBOutlet UITableView *tableView1;
 
 @property (retain, nonatomic) NSString* responseString;
 @property (nonatomic, retain)			NSMutableArray	*resultsArray;

@@ -42,6 +42,7 @@
 		DCC7757D14431CEF00A5A40F /* Comments.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC7757C14431CEF00A5A40F /* Comments.png */; };
 		DCC7758114431D1F00A5A40F /* CommentsInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC7757F14431D1F00A5A40F /* CommentsInputViewController.m */; };
 		DCC7758214431D1F00A5A40F /* CommentsInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC7758014431D1F00A5A40F /* CommentsInputViewController.xib */; };
+		DCCE8B021452BF50009559FB /* 73-radar.png in Resources */ = {isa = PBXBuildFile; fileRef = DCCE8B011452BF50009559FB /* 73-radar.png */; };
 		DCFFC1D114380F7100B3FF6D /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFFC1CF14380F7100B3FF6D /* DetailsViewController.m */; };
 		DCFFC1D214380F7100B3FF6D /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFFC1D014380F7100B3FF6D /* DetailsViewController.xib */; };
 		DCFFC1DB1438436A00B3FF6D /* Details.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFFC1D91438436A00B3FF6D /* Details.m */; };
@@ -104,6 +105,7 @@
 		DCC7757E14431D1F00A5A40F /* CommentsInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsInputViewController.h; sourceTree = "<group>"; };
 		DCC7757F14431D1F00A5A40F /* CommentsInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsInputViewController.m; sourceTree = "<group>"; };
 		DCC7758014431D1F00A5A40F /* CommentsInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsInputViewController.xib; sourceTree = "<group>"; };
+		DCCE8B011452BF50009559FB /* 73-radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "73-radar.png"; path = "../../../../../Applications/BNL/icons/73-radar.png"; sourceTree = "<group>"; };
 		DCFFC1CE14380F7100B3FF6D /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		DCFFC1CF14380F7100B3FF6D /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		DCFFC1D014380F7100B3FF6D /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
@@ -165,20 +167,8 @@
 		DCBC8AB714238C180067C0B4 /* iConcept Live */ = {
 			isa = PBXGroup;
 			children = (
-				DCC7757C14431CEF00A5A40F /* Comments.png */,
-				DC89B83C14374E2200A35C7C /* arrow.png */,
-				DCC1C499143B2D6900E90D06 /* great deals.png */,
-				DC89B83B143745F900A35C7C /* SBJsonBase.h */,
-				DC89B839143745F000A35C7C /* SBJsonBase.m */,
-				DC89B82D143745E700A35C7C /* NSObject+SBJSON.h */,
-				DC89B82E143745E700A35C7C /* NSObject+SBJSON.m */,
-				DC89B82F143745E700A35C7C /* NSString+SBJSON.h */,
-				DC89B830143745E800A35C7C /* NSString+SBJSON.m */,
-				DC89B831143745E800A35C7C /* SBJsonParser.h */,
-				DC89B832143745E800A35C7C /* SBJsonParser.m */,
-				DC89B833143745E800A35C7C /* SBJsonWriter.h */,
-				DC89B834143745E800A35C7C /* SBJsonWriter.m */,
-				DC89B82C143745CB00A35C7C /* JSON.h */,
+				DCCE8AFE1452BDBD009559FB /* Library */,
+				DCCE8AFC1452BD75009559FB /* Image */,
 				DCB6BE0D142E014900DCA5F4 /* AroundMeResults.h */,
 				DCB6BE0E142E014900DCA5F4 /* AroundMeResultsViewController.m */,
 				DCB6BE00142E012800DCA5F4 /* AroundMeMapResults.h */,
@@ -230,6 +220,35 @@
 				DCBC8ABF14238C190067C0B4 /* iConcept Live-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCCE8AFC1452BD75009559FB /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				DCCE8B011452BF50009559FB /* 73-radar.png */,
+				DCC1C499143B2D6900E90D06 /* great deals.png */,
+				DC89B83C14374E2200A35C7C /* arrow.png */,
+				DCC7757C14431CEF00A5A40F /* Comments.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		DCCE8AFE1452BDBD009559FB /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				DC89B83B143745F900A35C7C /* SBJsonBase.h */,
+				DC89B832143745E800A35C7C /* SBJsonParser.m */,
+				DC89B830143745E800A35C7C /* NSString+SBJSON.m */,
+				DC89B82E143745E700A35C7C /* NSObject+SBJSON.m */,
+				DC89B834143745E800A35C7C /* SBJsonWriter.m */,
+				DC89B831143745E800A35C7C /* SBJsonParser.h */,
+				DC89B82C143745CB00A35C7C /* JSON.h */,
+				DC89B82F143745E700A35C7C /* NSString+SBJSON.h */,
+				DC89B839143745F000A35C7C /* SBJsonBase.m */,
+				DC89B82D143745E700A35C7C /* NSObject+SBJSON.h */,
+				DC89B833143745E800A35C7C /* SBJsonWriter.h */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +314,7 @@
 				DCC7757A1443181400A5A40F /* CommentsViewController.xib in Resources */,
 				DCC7757D14431CEF00A5A40F /* Comments.png in Resources */,
 				DCC7758214431D1F00A5A40F /* CommentsInputViewController.xib in Resources */,
+				DCCE8B021452BF50009559FB /* 73-radar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

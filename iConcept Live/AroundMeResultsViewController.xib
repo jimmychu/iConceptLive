@@ -59,14 +59,17 @@
 						<object class="NSMutableArray" key="IBUIItems">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBUITabBarItem" id="667447859">
-								<string key="IBUITitle"/>
+								<string key="IBUITitle">Results</string>
+								<object class="NSCustomResource" key="IBUIImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">96-book.png</string>
+								</object>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<string key="IBUIBadgeValue">Results</string>
 								<reference key="IBUITabBar" ref="1054394852"/>
 							</object>
 							<object class="IBUITabBarItem" id="549483229">
 								<int key="IBUITag">1</int>
-								<string key="IBUITitle"/>
+								<string key="IBUITitle">Map</string>
 								<object class="NSCustomResource" key="IBUIImage">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">73-radar.png</string>
@@ -243,8 +246,17 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">73-radar.png</string>
-			<string key="NS.object.0">{27, 27}</string>
+			<bool key="EncodedWithXMLCoder">YES</bool>
+			<object class="NSArray" key="dict.sortedKeys">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>73-radar.png</string>
+				<string>96-book.png</string>
+			</object>
+			<object class="NSMutableArray" key="dict.values">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>{27, 27}</string>
+				<string>{18, 26}</string>
+			</object>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">534</string>
 	</data>

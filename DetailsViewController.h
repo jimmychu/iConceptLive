@@ -2,6 +2,14 @@
 //  DetailsViewController.h
 //  iConcept Live
 //
+//  Created by Jia Zhu on 23/10/11.
+//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//
+
+//
+//  DetailsViewController.h
+//  iConcept Live
+//
 //  Created by Jia Zhu on 2/10/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
@@ -11,14 +19,14 @@
 @interface DetailsViewController : UIViewController <UITabBarDelegate>{
     UITabBar *myTabBar1;
     UIViewController *currentViewController;
-   
+    
     NSString *responseString;
     NSString *RETAILERID;
     
     UINavigationController *navController;
     
     NSMutableData* responseData;
-  
+    
 }
 
 @property (nonatomic, retain) IBOutlet UITabBar *myTabBar1;
@@ -36,5 +44,3 @@
 
 
 @end
-
-

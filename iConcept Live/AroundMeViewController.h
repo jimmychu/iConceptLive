@@ -10,7 +10,7 @@
 
 //around me control screen, aroundme is a flow to display retailers around user current location
 @interface AroundMeViewController : UIViewController <UITabBarDelegate>{
-    IBOutlet UITableView *tableView;
+    IBOutlet UITableView *aroundMeViewtableView;
     
     NSMutableArray *categoryArray; //display retailer category
     
@@ -19,7 +19,7 @@
     NSString *responseString;
 }
 
-@property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property (nonatomic, retain) IBOutlet UITableView *aroundMeViewtableView;
 @property (nonatomic, retain) NSMutableArray *categoryArray;
 @property (retain, nonatomic) NSString* responseString;
 @property (retain, nonatomic) NSMutableData* responseData;

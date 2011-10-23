@@ -35,7 +35,7 @@
 }
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 @property (retain, nonatomic) NSMutableData* responseData;
-@property NSString *responseString;
+@property (retain, nonatomic) NSString *responseString;
 
 
 @end

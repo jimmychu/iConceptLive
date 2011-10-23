@@ -23,11 +23,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "iConcept Live/AroundMeResults.m"
-         timestampString = "339598555.375845"
+         timestampString = "341032509.260869"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "139"
-         endingLineNumber = "139"
+         startingLineNumber = "137"
+         endingLineNumber = "137"
          landmarkName = "-connection:didFailWithError:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -37,13 +37,27 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "iConcept Live/AroundMeResults.m"
-         timestampString = "339598555.375845"
+         timestampString = "341032509.260869"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "138"
-         endingLineNumber = "138"
+         startingLineNumber = "136"
+         endingLineNumber = "136"
          landmarkName = "-connection:didFailWithError:"
          landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "iConcept Live/AroundMeMapResults.h"
+         timestampString = "341038698.489649"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "38"
+         endingLineNumber = "38"
+         landmarkName = "responseString"
+         landmarkType = "19">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

@@ -16,7 +16,7 @@
 @synthesize resultsArray;
 @synthesize addressArray;
 @synthesize retailerIDArray;
-@synthesize tableView;
+@synthesize AroundMeResultstableView;
 @synthesize total;
 @synthesize responseData;
 @synthesize navController;
@@ -90,7 +90,7 @@
 {
     static NSString *CellIdentifier = @"CustomTableCell";
     
-    CustomTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    CustomTableCell *cell = (CustomTableCell *)[AroundMeResultstableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
        
         NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CustomTableCell" owner:nil options:nil];
@@ -114,15 +114,13 @@
     
     self.responseData = [NSMutableData data];
     
-    CustomTableCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    CustomTableCell *cell = (CustomTableCell *) [tableView cellForRowAtIndexPath:indexPath];
     
     NSString *url = [@"http://www.iconceptpress.com/iconceptlive/getdata.php?id=" stringByAppendingString:cell.retailerID.text];
   
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
-  
     
 }
 

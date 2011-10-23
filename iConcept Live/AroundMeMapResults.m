@@ -7,6 +7,7 @@
 //
 
 #import "AroundMeMapResults.h"
+#import "JSON.h"
 
 @implementation AroundMeMapResults
 

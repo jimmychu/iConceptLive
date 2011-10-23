@@ -10,7 +10,7 @@
 #import "AroundMeResultsViewController.h"
 
 @implementation AroundMeViewController
-@synthesize tableView;
+@synthesize aroundMeViewtableView;
 @synthesize categoryArray;
 @synthesize responseData;
 @synthesize responseString;
@@ -75,7 +75,7 @@
     
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = (UITableViewCell *)[aroundMeViewtableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
@@ -89,7 +89,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     self.responseData = [NSMutableData data];
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    UITableViewCell *cell = (UITableViewCell *)[aroundMeViewtableView cellForRowAtIndexPath:indexPath];
   
     self.title = cell.textLabel.text;
     
@@ -98,8 +98,6 @@
    
     
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
-    NSLog(url);
     
    
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];

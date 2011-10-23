@@ -15,7 +15,7 @@
     NSMutableArray *addressArray;
     NSMutableArray *retailerIDArray;
     int total;
-    IBOutlet UITableView *tableView;
+    IBOutlet UITableView *AroundMeResultstableView;
     UINavigationController *navController;
     NSMutableData* responseData;
 }
@@ -25,7 +25,7 @@
 @property (nonatomic, retain) NSMutableArray	*addressArray;
 @property (nonatomic, retain) NSMutableArray	*retailerIDArray;
 @property int total;
-@property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property (nonatomic, retain) IBOutlet UITableView *AroundMeResultstableView;
 @property (retain, nonatomic) NSMutableData* responseData;
 @property (nonatomic, retain) UINavigationController *navController;
 @end

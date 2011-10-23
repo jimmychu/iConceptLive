@@ -8,7 +8,6 @@
 
 #import "DetailsViewController.h"
 #import "Details.h"
-#import "DetailsMap.h"
 #import "CommentsViewController.h"
 #import "CommentsInputViewController.h"
 
@@ -33,28 +32,15 @@
         detailsViewController.RETAILERID = self.responseString;
         
         [self.view insertSubview:detailsViewController.view belowSubview:myTabBar1];
-     
+        
         
         if(currentViewController !=nil){
             [currentViewController.view removeFromSuperview];
             currentViewController = detailsViewController;
         }
     }
-
-    if(item.tag == 1){
-        NSLog(@"didSelectItem: %d", item.tag);
-        
-        DetailsMap *detailmap = [[DetailsMap alloc] initWithNibName:@"DetailsMap" bundle:nil];;
-        
-        detailmap.RETAILERID = self.responseString;
-        [self.view insertSubview:detailmap.view belowSubview:myTabBar1];
-        
-        
-        if(currentViewController !=nil){
-            [currentViewController.view removeFromSuperview];
-            currentViewController = detailmap;
-        }
-    }
+    
+    
     
     if(item.tag == 2){
         NSLog(@"didSelectItem: %d", item.tag);
@@ -64,7 +50,7 @@
         self.responseData = [NSMutableData data];
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
         [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
+        
     }
     
 }
@@ -93,7 +79,7 @@
     comments.responseString = self.responseString;
     
     [self.view insertSubview:comments.view belowSubview:myTabBar1];
-//[comments release];
+    //[comments release];
     
 }
 
@@ -120,13 +106,13 @@
 - (void)viewDidLoad
 {
     
-   
+    
     [super viewDidLoad];
     NSLog(@"I AM IN detail VIEW NOW !");
     Details *detailsViewController = [[Details alloc] initWithNibName:@"Details" bundle:nil];
     
     detailsViewController.RETAILERID = self.responseString;
-
+    
     
     UIImage *image = [UIImage imageNamed:@"Comments.png"];
     UIBarButtonItem *button2 = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(myCommentsButtonClicked)];
@@ -135,7 +121,7 @@
     self.navigationItem.rightBarButtonItem = button2;
     
     [button2 release];
-  
+    
     [self.view insertSubview:detailsViewController.view belowSubview:myTabBar1];
     
 }
@@ -145,7 +131,7 @@
     
     CommentsInputViewController *myCommentsVC = [[CommentsInputViewController alloc] initWithNibName:@"CommentsInputViewController" bundle:nil];
     //Exception thrown at line below
-    [self.navController pushViewController:myCommentsVC animated:YES];
+    [navController pushViewController:myCommentsVC animated:YES];
     
     [myCommentsVC release];
     

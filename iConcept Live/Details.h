@@ -7,24 +7,38 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+@interface DetailsAddressAnnotation : NSObject <MKAnnotation>
+{
+    CLLocationCoordinate2D coordinate;
+    
+    NSString *title;
+    NSString *subtitle;
+    
+}
+-(NSString *)title;
+-(NSString *)subtitle;
+-(void) setTitle:(NSString *)titleValue;
+-(void) setSubTitle:(NSString *)subtitleValue;
+
+@end
 
 @interface Details : UIViewController{
     
     NSString *RETAILERID; 
     
-    IBOutlet UILabel *RETAILERINFO;
     
-    IBOutlet UILabel *RETAILERADDRESS;
-    
-    IBOutlet UILabel *HOMEPAGE;
+    MKMapView *mapView;    
+    NSMutableData* responseData;
+    DetailsAddressAnnotation *addAnnotation; 
+    UITextView *textView;
+    UIScrollView *scrollView;
 }
 
 
 @property (retain, nonatomic)  NSString *RETAILERID; 
 
-@property (retain, nonatomic)  IBOutlet UILabel *RETAILERINFO;
-
-@property (retain, nonatomic)  IBOutlet UILabel *RETAILERADDRESS;
-
-@property (retain, nonatomic)  IBOutlet UILabel *HOMEPAGE;
+@property (nonatomic, retain) IBOutlet MKMapView *mapView;
+@property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, retain) IBOutlet UITextView *textView;
 @end

@@ -59,7 +59,6 @@
         
         [resultsArray addObject:message];
         
-         NSLog(message);
     }
     
     

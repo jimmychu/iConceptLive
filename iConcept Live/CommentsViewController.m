@@ -107,8 +107,10 @@
 - (void)dealloc
 {
     
-    [resultsArray release];
     [super dealloc];
+    
+    [resultsArray release];
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

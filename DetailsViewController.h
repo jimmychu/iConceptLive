@@ -15,14 +15,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CommentsInputViewController.h"
 
 @interface DetailsViewController : UIViewController <UITabBarDelegate>{
     UITabBar *myTabBar1;
     UIViewController *currentViewController;
-    
+    NSString *commentsData;
     NSString *responseString;
     NSString *RETAILERID;
-    
+    CommentsInputViewController *myCommentsVC;
     UINavigationController *navController;
     
     NSMutableData* responseData;
@@ -35,8 +36,8 @@
 
 @property (retain, nonatomic) NSString* responseString;
 @property (retain, nonatomic)  NSString *RETAILERID;
-
-
+@property (retain, nonatomic) NSString* commmentsData;
+@property (nonatomic, retain) CommentsInputViewController *myCommentsVC;
 @property (nonatomic, retain) UIViewController *navController;
 
 @property (retain, nonatomic) NSMutableData* responseData;

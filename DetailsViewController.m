@@ -9,16 +9,18 @@
 #import "DetailsViewController.h"
 #import "Details.h"
 #import "CommentsViewController.h"
-#import "CommentsInputViewController.h"
+
+#import "JSON.h"
 
 @implementation DetailsViewController
-
+@synthesize myCommentsVC;
 @synthesize myTabBar1;
 @synthesize currentViewController;
 @synthesize RETAILERID;
 @synthesize responseString;
 @synthesize responseData;
 @synthesize navController;
+@synthesize commmentsData;
 
 //details view tab controller for this retailer
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
@@ -27,7 +29,7 @@
         NSLog(@"didSelectItem: %d", item.tag);
         
         Details *detailsViewController = [[Details alloc] initWithNibName:@"Details" bundle:nil];
-        
+ 
         
         detailsViewController.RETAILERID = self.responseString;
         
@@ -71,16 +73,16 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     [connection release];
     
-    self.responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    self.commmentsData = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     self.responseData = nil;
     
     // NSLog(self.responseString);
     CommentsViewController *comments = [[CommentsViewController alloc] initWithNibName:@"CommentsViewController" bundle:nil];;
-    comments.responseString = self.responseString;
+    comments.responseString = self.commmentsData;
     
     [self.view insertSubview:comments.view belowSubview:myTabBar1];
     //[comments release];
-    
+        
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -129,7 +131,7 @@
 
 -(void)myCommentsButtonClicked {
     
-    CommentsInputViewController *myCommentsVC = [[CommentsInputViewController alloc] initWithNibName:@"CommentsInputViewController" bundle:nil];
+   myCommentsVC = [[CommentsInputViewController alloc] initWithNibName:@"CommentsInputViewController" bundle:nil];
     //Exception thrown at line below
     [navController pushViewController:myCommentsVC animated:YES];
     

@@ -44,13 +44,14 @@
     textView.clipsToBounds = YES;
     textView.backgroundColor = UIColor.blackColor;
     
-    NSArray* detailsData = [RETAILERID JSONValue];
-    
+    NSArray* detailsData = [self.RETAILERID JSONValue];
+ 
     //choose a random loan
     NSDictionary* singleResult = [detailsData objectAtIndex:0];
     
     
     NSString* name = [singleResult objectForKey:@"NAME"];
+   
     NSString* addressDetail = [singleResult objectForKey:@"ADDRESS"];
     NSString* SUBURB = [singleResult objectForKey:@"SUBURB"];   
     NSString* STATE = [singleResult objectForKey:@"STATE"]; 
@@ -64,15 +65,17 @@
     addressDetail = [addressDetail stringByAppendingString:STATE];
     addressDetail = [addressDetail stringByAppendingString:@", "];
     addressDetail = [addressDetail stringByAppendingString:POSTCODE];
-    NSString* total = @"";
     
+    NSString* total = @"";
     total = [total stringByAppendingString:name];
     total = [total stringByAppendingString:@"\n\n"];
     total = [total stringByAppendingString:addressDetail];
     total = [total stringByAppendingString:@"\n\n"];
     total = [total stringByAppendingString:HOMEPAGEURL];
+    
     [self.textView setText:total];
 
+    
     // Do any additional setup after loading the view from its nib.
     
     MKCoordinateRegion region;

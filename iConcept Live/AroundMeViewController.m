@@ -25,8 +25,6 @@
 }
 
 
-
-
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -46,13 +44,10 @@
     categoryArray = [[NSMutableArray alloc] init]; 
 	[categoryArray addObject:@"Restaurants"];
     [categoryArray addObject:@"Bars and Clubs"];
-    [categoryArray addObject:@"Convenient Shops"];
     [categoryArray addObject:@"Health and Beauty"];
     [categoryArray addObject:@"Petrol Stations"];
     [categoryArray addObject:@"Entertainment"];
-    [categoryArray addObject:@"Hotels"];
-    [categoryArray addObject:@"Fruit Shops"];
-    [categoryArray addObject:@"Supermarkets"];
+    [categoryArray addObject:@"Stay"];
      
 }
 
@@ -66,7 +61,7 @@
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
-    return 9;
+    return 6;
 }
 
 
@@ -75,22 +70,25 @@
     
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = (UITableViewCell *)[aroundMeViewtableView dequeueReusableCellWithIdentifier:CellIdentifier];
+UITableViewCell *cell = (UITableViewCell *)[aroundMeViewtableView dequeueReusableCellWithIdentifier:CellIdentifier];
+     
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
-    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	// Configure the cell.
 	[cell.textLabel setText:[categoryArray objectAtIndex:indexPath.row]];
 	
     return cell;
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     self.responseData = [NSMutableData data];
     UITableViewCell *cell = (UITableViewCell *)[aroundMeViewtableView cellForRowAtIndexPath:indexPath];
-  
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
     self.title = cell.textLabel.text;
     
     //Get data from remote server

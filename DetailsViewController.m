@@ -42,6 +42,18 @@
         }
     }
     
+    if(item.tag == 1){
+        
+        self.title = @"Take Me There";
+        
+             
+        detailmapVC = [[DetailMapViewController alloc] initWithNibName:@"DetailMapViewController" bundle:nil];;
+        detailmapVC.RETAILERID = self.responseString;
+
+        [self.view insertSubview:detailmapVC.view belowSubview:myTabBar1];
+        
+    }
+
     
     
     if(item.tag == 2){

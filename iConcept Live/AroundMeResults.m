@@ -91,6 +91,7 @@
     static NSString *CellIdentifier = @"CustomTableCell";
     
     CustomTableCell *cell = (CustomTableCell *)[AroundMeResultstableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
     if (cell == nil) {
        
         NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CustomTableCell" owner:nil options:nil];
@@ -104,6 +105,7 @@
         
     }
     // Configure the cell.
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	cell.name.text = [resultsArray objectAtIndex:indexPath.row];
     cell.address.text = [addressArray objectAtIndex:indexPath.row];
     cell.retailerID.text = [retailerIDArray objectAtIndex:indexPath.row];
@@ -116,6 +118,7 @@
     
     CustomTableCell *cell = (CustomTableCell *) [tableView cellForRowAtIndexPath:indexPath];
     
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     NSString *url = [@"http://www.iconceptpress.com/iconceptlive/getdata.php?id=" stringByAppendingString:cell.retailerID.text];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
@@ -123,6 +126,7 @@
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
     
 }
+
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     [responseData setLength:0];

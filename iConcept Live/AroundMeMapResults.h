@@ -22,6 +22,7 @@
 -(NSString *)subtitle;
 -(void) setTitle:(NSString *)titleValue;
 -(void) setSubTitle:(NSString *)subtitleValue;
+- (id) initWithCoordinate: (CLLocationCoordinate2D) c;
 
 @end
 
@@ -36,6 +37,7 @@
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 @property (retain, nonatomic) NSMutableData* responseData;
 @property (retain, nonatomic) NSString *responseString;
+
 
 
 @end

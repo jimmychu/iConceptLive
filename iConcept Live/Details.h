@@ -20,6 +20,7 @@
 -(NSString *)subtitle;
 -(void) setTitle:(NSString *)titleValue;
 -(void) setSubTitle:(NSString *)subtitleValue;
+- (id) initWithCoordinate: (CLLocationCoordinate2D) c;
 
 @end
 

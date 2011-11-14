@@ -65,7 +65,7 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="569632716">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="315811994">
 							<string key="name">Helvetica-Bold</string>
 							<string key="family">Helvetica</string>
 							<int key="traits">2</int>
@@ -83,21 +83,21 @@
 						<string key="NSFrame">{{190, 101}, {98, 71}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="573070289"/>
 						<string key="NSReuseIdentifierKey">_NS:222</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">Top Rated</string>
+						<string key="IBUINormalTitle">By City</string>
 						<reference key="IBUIHighlightedTitleColor" ref="506351072"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="871240131"/>
-						<reference key="IBUIFontDescription" ref="569632716"/>
+						<reference key="IBUIFontDescription" ref="315811994"/>
 						<reference key="IBUIFont" ref="1063366282"/>
 					</object>
 					<object class="IBUIButton" id="573070289">
@@ -106,6 +106,7 @@
 						<string key="NSFrame">{{82, 260}, {157, 64}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:222</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -119,7 +120,7 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="871240131"/>
-						<reference key="IBUIFontDescription" ref="569632716"/>
+						<reference key="IBUIFontDescription" ref="315811994"/>
 						<reference key="IBUIFont" ref="1063366282"/>
 					</object>
 				</object>

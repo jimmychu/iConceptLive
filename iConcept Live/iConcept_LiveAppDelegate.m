@@ -17,10 +17,13 @@
 - (void)applicationDidFinishLaunching:(UIApplication *)application{
     
     navController = [[UINavigationController alloc] init];
+  
     
+    navController.navigationBar.tintColor = [UIColor orangeColor];;
     
     HomeViewController *homeViewController = [[HomeViewController alloc] init];
     homeViewController.title = @"iConcept Life";
+    
     [navController pushViewController:homeViewController animated:YES];
     [homeViewController release];
     

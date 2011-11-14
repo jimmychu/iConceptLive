@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC834253147158DE00F7025A /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DC834252147158DE00F7025A /* Location.gpx */; };
 		DC89B829143742AE00A35C7C /* CustomTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC89B827143742AE00A35C7C /* CustomTableCell.m */; };
 		DC89B82A143742AE00A35C7C /* CustomTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC89B828143742AE00A35C7C /* CustomTableCell.xib */; };
 		DC89B835143745E800A35C7C /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = DC89B82E143745E700A35C7C /* NSObject+SBJSON.m */; };
@@ -40,6 +41,10 @@
 		DCC7757D14431CEF00A5A40F /* Comments.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC7757C14431CEF00A5A40F /* Comments.png */; };
 		DCC7758114431D1F00A5A40F /* CommentsInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC7757F14431D1F00A5A40F /* CommentsInputViewController.m */; };
 		DCC7758214431D1F00A5A40F /* CommentsInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC7758014431D1F00A5A40F /* CommentsInputViewController.xib */; };
+		DCCCAFFC146FEE29007D62E4 /* DetailMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCCAFFA146FEE28007D62E4 /* DetailMapViewController.m */; };
+		DCCCAFFD146FEE29007D62E4 /* DetailMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCCCAFFB146FEE29007D62E4 /* DetailMapViewController.xib */; };
+		DCCCAFFF146FEE62007D62E4 /* 96-book.png in Resources */ = {isa = PBXBuildFile; fileRef = DCCCAFFE146FEE62007D62E4 /* 96-book.png */; };
+		DCCCB005146FF28A007D62E4 /* 71-compass.png in Resources */ = {isa = PBXBuildFile; fileRef = DCCCB004146FF28A007D62E4 /* 71-compass.png */; };
 		DCCD3E621453B9D1002C46A1 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCD3E601453B9D0002C46A1 /* DetailsViewController.m */; };
 		DCCD3E631453B9D1002C46A1 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCCD3E611453B9D0002C46A1 /* DetailsViewController.xib */; };
 		DCCE8B021452BF50009559FB /* 73-radar.png in Resources */ = {isa = PBXBuildFile; fileRef = DCCE8B011452BF50009559FB /* 73-radar.png */; };
@@ -48,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC834252147158DE00F7025A /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		DC89B826143742AE00A35C7C /* CustomTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableCell.h; sourceTree = "<group>"; };
 		DC89B827143742AE00A35C7C /* CustomTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableCell.m; sourceTree = "<group>"; };
 		DC89B828143742AE00A35C7C /* CustomTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableCell.xib; sourceTree = "<group>"; };
@@ -99,6 +105,11 @@
 		DCC7757E14431D1F00A5A40F /* CommentsInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsInputViewController.h; sourceTree = "<group>"; };
 		DCC7757F14431D1F00A5A40F /* CommentsInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsInputViewController.m; sourceTree = "<group>"; };
 		DCC7758014431D1F00A5A40F /* CommentsInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsInputViewController.xib; sourceTree = "<group>"; };
+		DCCCAFF9146FEE28007D62E4 /* DetailMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailMapViewController.h; sourceTree = "<group>"; };
+		DCCCAFFA146FEE28007D62E4 /* DetailMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailMapViewController.m; sourceTree = "<group>"; };
+		DCCCAFFB146FEE29007D62E4 /* DetailMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailMapViewController.xib; sourceTree = "<group>"; };
+		DCCCAFFE146FEE62007D62E4 /* 96-book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "96-book.png"; sourceTree = "<group>"; };
+		DCCCB004146FF28A007D62E4 /* 71-compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "71-compass.png"; sourceTree = "<group>"; };
 		DCCD3E5F1453B9D0002C46A1 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailsViewController.h; path = ../DetailsViewController.h; sourceTree = "<group>"; };
 		DCCD3E601453B9D0002C46A1 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailsViewController.m; path = ../DetailsViewController.m; sourceTree = "<group>"; };
 		DCCD3E611453B9D0002C46A1 /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailsViewController.xib; path = ../DetailsViewController.xib; sourceTree = "<group>"; };
@@ -171,6 +182,9 @@
 				DC89B826143742AE00A35C7C /* CustomTableCell.h */,
 				DC89B827143742AE00A35C7C /* CustomTableCell.m */,
 				DCB6BE05142E012800DCA5F4 /* AroundMeResultsViewController.h */,
+				DCCCAFF9146FEE28007D62E4 /* DetailMapViewController.h */,
+				DCCCAFFA146FEE28007D62E4 /* DetailMapViewController.m */,
+				DC834252147158DE00F7025A /* Location.gpx */,
 				DCBC8AC014238C190067C0B4 /* iConcept_LiveAppDelegate.h */,
 				DCBC8AC114238C190067C0B4 /* iConcept_LiveAppDelegate.m */,
 				DCBC8ACE14238D8B0067C0B4 /* HomeViewController.h */,
@@ -213,6 +227,7 @@
 				DCBC8AD5142393EF0067C0B4 /* AroundMeViewController.xib */,
 				DCB6BE04142E012800DCA5F4 /* AroundMeResults.xib */,
 				DCB6BE02142E012800DCA5F4 /* AroundMeMapResults.xib */,
+				DCCCAFFB146FEE29007D62E4 /* DetailMapViewController.xib */,
 				DCCD3E611453B9D0002C46A1 /* DetailsViewController.xib */,
 			);
 			name = View;
@@ -221,6 +236,8 @@
 		DCCE8AFC1452BD75009559FB /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				DCCCB004146FF28A007D62E4 /* 71-compass.png */,
+				DCCCAFFE146FEE62007D62E4 /* 96-book.png */,
 				DCCE8B011452BF50009559FB /* 73-radar.png */,
 				DCC7757C14431CEF00A5A40F /* Comments.png */,
 			);
@@ -309,6 +326,10 @@
 				DCC7758214431D1F00A5A40F /* CommentsInputViewController.xib in Resources */,
 				DCCE8B021452BF50009559FB /* 73-radar.png in Resources */,
 				DCCD3E631453B9D1002C46A1 /* DetailsViewController.xib in Resources */,
+				DCCCAFFD146FEE29007D62E4 /* DetailMapViewController.xib in Resources */,
+				DCCCAFFF146FEE62007D62E4 /* 96-book.png in Resources */,
+				DCCCB005146FF28A007D62E4 /* 71-compass.png in Resources */,
+				DC834253147158DE00F7025A /* Location.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +358,7 @@
 				DCC775791443181400A5A40F /* CommentsViewController.m in Sources */,
 				DCC7758114431D1F00A5A40F /* CommentsInputViewController.m in Sources */,
 				DCCD3E621453B9D1002C46A1 /* DetailsViewController.m in Sources */,
+				DCCCAFFC146FEE29007D62E4 /* DetailMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

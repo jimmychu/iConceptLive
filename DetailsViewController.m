@@ -28,7 +28,7 @@
     if(item.tag == 0){
         NSLog(@"didSelectItem: %d", item.tag);
         
-        Details *detailsViewController = [[Details alloc] initWithNibName:@"Details" bundle:nil];
+        detailsViewController = [[Details alloc] initWithNibName:@"Details" bundle:nil];
  
         
         detailsViewController.RETAILERID = self.responseString;
@@ -63,7 +63,7 @@
         
         self.responseData = [NSMutableData data];
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
-        [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        _connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
         
     }
     
@@ -83,13 +83,12 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    [connection release];
+    [_connection release];
     
-    self.commmentsData = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    commmentsData = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     self.responseData = nil;
-    
-    // NSLog(self.responseString);
-    CommentsViewController *comments = [[CommentsViewController alloc] initWithNibName:@"CommentsViewController" bundle:nil];;
+   
+    comments = [[CommentsViewController alloc] initWithNibName:@"CommentsViewController" bundle:nil];;
     comments.responseString = self.commmentsData;
     
     [self.view insertSubview:comments.view belowSubview:myTabBar1];
@@ -122,8 +121,8 @@
     
     
     [super viewDidLoad];
-    NSLog(@"I AM IN detail VIEW NOW !");
-    Details *detailsViewController = [[Details alloc] initWithNibName:@"Details" bundle:nil];
+    
+    detailsViewController = [[Details alloc] initWithNibName:@"Details" bundle:nil];
     
     detailsViewController.RETAILERID = self.responseString;
     

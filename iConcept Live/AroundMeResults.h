@@ -18,6 +18,7 @@
     IBOutlet UITableView *AroundMeResultstableView;
     UINavigationController *navController;
     NSMutableData* responseData;
+     NSURLConnection *_connection;
 }
 
 @property (retain, nonatomic) NSString* responseString;

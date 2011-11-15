@@ -100,8 +100,7 @@ UITableViewCell *cell = (UITableViewCell *)[aroundMeViewtableView dequeueReusabl
    
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     
-    [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
+       _connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];    
     
    
 }
@@ -121,8 +120,8 @@ UITableViewCell *cell = (UITableViewCell *)[aroundMeViewtableView dequeueReusabl
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    [connection release];
-    self.responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    [_connection release];
+    responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     self.responseData = nil; //release the data
     
     AroundMeResultsViewController *aroundmeResultsController = [[AroundMeResultsViewController alloc] init];

@@ -101,7 +101,7 @@
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webview loadRequest:request];
-
+     [lm stopUpdatingLocation];
     
     [acc release];
     [lat release];

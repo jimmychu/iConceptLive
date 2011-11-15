@@ -55,8 +55,8 @@
     
     CLLocationCoordinate2D location = mapView.userLocation.coordinate;
     region.span=span;
-    
-    NSMutableArray *address = [[NSMutableArray alloc] init];
+    region.center=location;
+    address = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < [maplocations count]; i++){
         

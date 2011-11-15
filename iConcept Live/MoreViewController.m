@@ -1,31 +1,35 @@
 //
-//  HomeViewController.m
+//  MoreViewController.m
 //  iConcept Live
 //
-//  Created by Jia Zhu on 16/09/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Jia Zhu on 15/11/11.
+//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "HomeViewController.h"
-#import "AroundMeViewController.h"
 #import "MoreViewController.h"
-@implementation HomeViewController
 
-- (IBAction)pushViewController:(id)sender{
-    //send to next view
-    AroundMeViewController *aroundmeViewController = [[AroundMeViewController alloc] init];
-    aroundmeViewController.title = @"Around Me";
-    [self.navigationController pushViewController:aroundmeViewController animated:YES];
-    [aroundmeViewController release];
+@implementation MoreViewController
+@synthesize myTabBar2;
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
     
-}
-
-- (IBAction)pushMoreViewController:(id)sender{
-    //send to next view
-    MoreViewController *moreVC = [[MoreViewController alloc] init];
-    moreVC.title = @"About";
-    [self.navigationController pushViewController:moreVC animated:YES];
-    [moreVC release];
+    if(item.tag == 0){
+        
+        aboutVC = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];;
+        
+        [self.view insertSubview:shareVC.view belowSubview:myTabBar2];
+       
+        
+    }
+    
+    if(item.tag == 1){
+        
+        self.title = @"Share to Friends";
+        shareVC = [[ShareViewController alloc] initWithNibName:@"ShareViewController" bundle:nil];;
+        
+        [self.view insertSubview:shareVC.view belowSubview:myTabBar2];
+    
+    }
     
 }
 
@@ -37,7 +41,6 @@
     }
     return self;
 }
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -53,6 +56,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    aboutVC = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];;
+    
+    [self.view insertSubview:shareVC.view belowSubview:myTabBar2];
+
 }
 
 - (void)viewDidUnload

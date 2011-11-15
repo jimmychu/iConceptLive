@@ -123,7 +123,7 @@
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     
-    [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    _connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     
 }
 
@@ -142,8 +142,8 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    [connection release];
-    self.responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    [_connection release];
+    responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     self.responseData = nil;
     
     DetailsViewController *detailsController = [[DetailsViewController alloc] init];

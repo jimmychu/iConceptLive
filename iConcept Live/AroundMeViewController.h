@@ -17,6 +17,7 @@
     NSMutableData* responseData; //use to store data from server
     
     NSString *responseString;
+     NSURLConnection *_connection;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *aroundMeViewtableView;

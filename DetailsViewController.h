@@ -17,6 +17,8 @@
 #import <UIKit/UIKit.h>
 #import "CommentsInputViewController.h"
 #import "DetailMapViewController.h"
+#import "Details.h"
+#import "CommentsViewController.h"
 
 @interface DetailsViewController : UIViewController <UITabBarDelegate>{
     UITabBar *myTabBar1;
@@ -28,6 +30,9 @@
     UINavigationController *navController;
     DetailMapViewController *detailmapVC;
     NSMutableData* responseData;
+    Details *detailsViewController;
+     NSURLConnection *_connection;
+    CommentsViewController *comments;
     
 }
 

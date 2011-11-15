@@ -1,33 +1,14 @@
 //
-//  HomeViewController.m
+//  AboutViewController.m
 //  iConcept Live
 //
-//  Created by Jia Zhu on 16/09/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Jia Zhu on 15/11/11.
+//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "HomeViewController.h"
-#import "AroundMeViewController.h"
-#import "MoreViewController.h"
-@implementation HomeViewController
+#import "AboutViewController.h"
 
-- (IBAction)pushViewController:(id)sender{
-    //send to next view
-    AroundMeViewController *aroundmeViewController = [[AroundMeViewController alloc] init];
-    aroundmeViewController.title = @"Around Me";
-    [self.navigationController pushViewController:aroundmeViewController animated:YES];
-    [aroundmeViewController release];
-    
-}
-
-- (IBAction)pushMoreViewController:(id)sender{
-    //send to next view
-    MoreViewController *moreVC = [[MoreViewController alloc] init];
-    moreVC.title = @"About";
-    [self.navigationController pushViewController:moreVC animated:YES];
-    [moreVC release];
-    
-}
+@implementation AboutViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,7 +18,6 @@
     }
     return self;
 }
-
 
 - (void)didReceiveMemoryWarning
 {

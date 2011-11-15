@@ -12,7 +12,7 @@
 
 @implementation Details
 @synthesize RETAILERID;
-@synthesize mapView;
+
 @synthesize textView;
 @synthesize scrollView;
 
@@ -76,51 +76,9 @@
     [self.textView setText:total];
 
     
-    // Do any additional setup after loading the view from its nib.
-    
-    MKCoordinateRegion region;
-    MKCoordinateSpan span;
-    span.latitudeDelta=0.01;
-    span.longitudeDelta=0.01;
-    
-    
-    CLLocationCoordinate2D location = mapView.userLocation.coordinate;
-    region.span=span;
-    
-    NSMutableArray *address = [[NSMutableArray alloc] init];
-    
-    if(addAnnotation != nil)
-    {
-        [mapView removeAnnotation:addAnnotation];
-        [addAnnotation release];
-        addAnnotation = nil;
-    }
-    
-    
-    
-    NSNumber* longitude = [singleResult objectForKey:@"LONGITUDE_DEGREE"];
-    NSNumber* latitude = [singleResult objectForKey:@"LATITUDE_DEGREE"];
-    
-    
-    location.longitude = longitude.floatValue;
-    location.latitude = latitude.floatValue;
-    
-    
-    addAnnotation = [[DetailsAddressAnnotation alloc] initWithCoordinate:location];
-    [addAnnotation setTitle:name];
-    [addAnnotation setSubTitle:addressDetail];
-    region.center=location;
-    [address addObject:addAnnotation];
-    
-    
-    [mapView addAnnotations:address];
-    
-    [mapView setRegion:region animated:TRUE];
-    [mapView regionThatFits:region];
-    scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
+       scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
     scrollView.contentSize = CGSizeMake(847, 800);
-    [scrollView addSubview:mapView];
-    [mapView release];
+  
     [scrollView addSubview:textView];
     [textView release];
     
@@ -143,39 +101,3 @@
 
 @end
 
-@implementation DetailsAddressAnnotation
-
-@synthesize coordinate;
-
--  (void) setTitle:(NSString *)titleValue{
-    
-    [titleValue retain];
-    [title release];
-    
-    title = titleValue;
-}
-
--  (void) setSubTitle:(NSString *)subtitleValue{
-    [subtitleValue retain];
-    [subtitle release];
-    subtitle = subtitleValue;
-}
-
-- (NSString *)subtitle
-{   
-    //please modify to retrieve subtitle from database
-    return subtitle;
-}
-- (NSString *)title
-{
-    return title;
-}
-
--(id)initWithCoordinate:(CLLocationCoordinate2D) c
-{
-    coordinate = c;
-    NSLog(@"%f,%f", c.latitude, c.longitude);
-    return self;
-}
-
-@end

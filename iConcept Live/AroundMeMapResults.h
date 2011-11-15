@@ -32,6 +32,7 @@
     NSMutableData* responseData;
     AddressAnnotation *addAnnotation; 
     NSString *responseString;
+    NSMutableArray *address;
     
 }
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;

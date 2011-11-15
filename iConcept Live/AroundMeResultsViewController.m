@@ -7,7 +7,7 @@
 //
 
 #import "AroundMeResultsViewController.h"
-#import "AroundMeResults.h"
+
 #import "AroundMeMapResults.h"
 
 
@@ -20,8 +20,8 @@
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
     
     if(item.tag == 0){
-        NSLog(@"didSelectItem: %d", item.tag);
-        AroundMeResults *resultsViewController = [[AroundMeResults alloc] initWithNibName:@"AroundMeResults" bundle:nil];
+     
+      resultsViewController = [[AroundMeResults alloc] initWithNibName:@"AroundMeResults" bundle:nil];
         
         resultsViewController.responseString = self.responseString;
         resultsViewController.navController = self.navController;
@@ -34,16 +34,13 @@
     }
     
     if(item.tag == 1){
-        NSLog(@"didSelectItem: %d", item.tag);
+       
         
-        AroundMeMapResults *mapViewController = [[AroundMeMapResults alloc] initWithNibName:@"AroundMeMapResults" bundle:nil];
+        mapViewController = [[AroundMeMapResults alloc] initWithNibName:@"AroundMeMapResults" bundle:nil];
         mapViewController.responseString = self.responseString;
         [self.view insertSubview:mapViewController.view belowSubview:myTabBar];
         
-        if(currentViewController !=nil){
-            [currentViewController.view removeFromSuperview];
-            currentViewController = mapViewController;
-        }
+        
     }
     
 }
@@ -71,9 +68,8 @@
 {
     [super viewDidLoad];
     
-    NSLog(@"I AM IN SECOND VIEW NOW !");
     
-    AroundMeResults *resultsViewController = [[AroundMeResults alloc] initWithNibName:@"AroundMeResults" bundle:nil];;
+    resultsViewController = [[AroundMeResults alloc] initWithNibName:@"AroundMeResults" bundle:nil];;
     resultsViewController.responseString = self.responseString;
     
    

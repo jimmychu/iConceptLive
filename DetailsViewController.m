@@ -49,7 +49,7 @@
              
         detailmapVC = [[DetailMapViewController alloc] initWithNibName:@"DetailMapViewController" bundle:nil];;
         detailmapVC.RETAILERID = self.responseString;
-
+      
         [self.view insertSubview:detailmapVC.view belowSubview:myTabBar1];
         
     }

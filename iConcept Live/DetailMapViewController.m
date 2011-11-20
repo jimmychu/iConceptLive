@@ -85,7 +85,7 @@
     NSString* latitude = [singleResult objectForKey:@"LATITUDE_DEGREE"];
     
     
-    // NSString *mapurl = [NSString stringWithFormat:@"http://maps.google.com/maps?saddr=Current%20Location&daddr=%f,%f", latitude, longitude];
+    // NSString *mapurl = [NSString stringWithFormat:@"maps://maps.google.com/maps?saddr=Current%20Location&daddr=%f,%f", latitude, longitude];
     NSString *mapurl = @"http://maps.google.com/maps?saddr=";
     mapurl = [mapurl stringByAppendingString:lat];
     mapurl = [mapurl stringByAppendingString:@","];
@@ -94,12 +94,16 @@
     mapurl = [mapurl stringByAppendingString:latitude];
     mapurl = [mapurl stringByAppendingString:@","];
     mapurl = [mapurl stringByAppendingString:longitude];
+    
+    mapurl = [mapurl stringByAppendingString:@"&output=embed"];
     mapurl = [mapurl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-
+  
     
     NSURL *url = [NSURL URLWithString:mapurl];
+   
+    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:mapurl]]; 
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+   NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webview loadRequest:request];
      [lm stopUpdatingLocation];
     

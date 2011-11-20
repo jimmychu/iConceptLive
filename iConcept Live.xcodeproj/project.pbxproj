@@ -15,6 +15,15 @@
 		DC89B837143745E800A35C7C /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DC89B832143745E800A35C7C /* SBJsonParser.m */; };
 		DC89B838143745E800A35C7C /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = DC89B834143745E800A35C7C /* SBJsonWriter.m */; };
 		DC89B83A143745F000A35C7C /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DC89B839143745F000A35C7C /* SBJsonBase.m */; };
+		DC8A41AE1478D3E900FF9245 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8A41AC1478D3E900FF9245 /* CategoryViewController.m */; };
+		DC8A41AF1478D3E900FF9245 /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8A41AD1478D3E900FF9245 /* CategoryViewController.xib */; };
+		DC8A41B71478DB0100FF9245 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8A41B61478DB0100FF9245 /* Default.png */; };
+		DCA92706147802F800CB8D60 /* 08-chat.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA92705147802F800CB8D60 /* 08-chat.png */; };
+		DCA927081478037E00CB8D60 /* 33-cabinet.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA927071478037E00CB8D60 /* 33-cabinet.png */; };
+		DCA966A714754B86008465B3 /* CommentsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA966A514754B86008465B3 /* CommentsTableCell.m */; };
+		DCA966A814754B86008465B3 /* CommentsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA966A614754B86008465B3 /* CommentsTableCell.xib */; };
+		DCA966AD14754D52008465B3 /* CommentsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA966AB14754D52008465B3 /* CommentsDetailViewController.m */; };
+		DCA966AE14754D52008465B3 /* CommentsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA966AC14754D52008465B3 /* CommentsDetailViewController.xib */; };
 		DCAFA4E0147291FE006C5969 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAFA4DE147291FE006C5969 /* MoreViewController.m */; };
 		DCAFA4E1147291FE006C5969 /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCAFA4DF147291FE006C5969 /* MoreViewController.xib */; };
 		DCAFA4EA14729864006C5969 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAFA4E814729864006C5969 /* ShareViewController.m */; };
@@ -76,6 +85,18 @@
 		DC89B834143745E800A35C7C /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		DC89B839143745F000A35C7C /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
 		DC89B83B143745F900A35C7C /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		DC8A41AB1478D3E900FF9245 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		DC8A41AC1478D3E900FF9245 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		DC8A41AD1478D3E900FF9245 /* CategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
+		DC8A41B61478DB0100FF9245 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DCA92705147802F800CB8D60 /* 08-chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08-chat.png"; sourceTree = "<group>"; };
+		DCA927071478037E00CB8D60 /* 33-cabinet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "33-cabinet.png"; sourceTree = "<group>"; };
+		DCA966A414754B86008465B3 /* CommentsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsTableCell.h; sourceTree = "<group>"; };
+		DCA966A514754B86008465B3 /* CommentsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsTableCell.m; sourceTree = "<group>"; };
+		DCA966A614754B86008465B3 /* CommentsTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsTableCell.xib; sourceTree = "<group>"; };
+		DCA966AA14754D52008465B3 /* CommentsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentsDetailViewController.h; path = ../CommentsDetailViewController.h; sourceTree = "<group>"; };
+		DCA966AB14754D52008465B3 /* CommentsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentsDetailViewController.m; path = ../CommentsDetailViewController.m; sourceTree = "<group>"; };
+		DCA966AC14754D52008465B3 /* CommentsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentsDetailViewController.xib; path = ../CommentsDetailViewController.xib; sourceTree = "<group>"; };
 		DCAFA4DD147291FE006C5969 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		DCAFA4DE147291FE006C5969 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		DCAFA4DF147291FE006C5969 /* MoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
@@ -188,6 +209,9 @@
 		DCBC8AB714238C180067C0B4 /* iConcept Live */ = {
 			isa = PBXGroup;
 			children = (
+				DCA966AA14754D52008465B3 /* CommentsDetailViewController.h */,
+				DCA966AB14754D52008465B3 /* CommentsDetailViewController.m */,
+				DCA966AC14754D52008465B3 /* CommentsDetailViewController.xib */,
 				DCCCAFF0146EBBDA007D62E4 /* View */,
 				DCCE8AFC1452BD75009559FB /* Image */,
 				DCCE8AFE1452BDBD009559FB /* Library */,
@@ -196,6 +220,8 @@
 				DCAFA4E814729864006C5969 /* ShareViewController.m */,
 				DCAFA4F014729F4D006C5969 /* AboutViewController.h */,
 				DCAFA4F114729F4D006C5969 /* AboutViewController.m */,
+				DC8A41AB1478D3E900FF9245 /* CategoryViewController.h */,
+				DC8A41AC1478D3E900FF9245 /* CategoryViewController.m */,
 				DCAFA4DD147291FE006C5969 /* MoreViewController.h */,
 				DCAFA4DE147291FE006C5969 /* MoreViewController.m */,
 				DCCD3E601453B9D0002C46A1 /* DetailsViewController.m */,
@@ -222,6 +248,9 @@
 				DCFFC1D91438436A00B3FF6D /* Details.m */,
 				DCC775761443181400A5A40F /* CommentsViewController.h */,
 				DCC775771443181400A5A40F /* CommentsViewController.m */,
+				DCA966A414754B86008465B3 /* CommentsTableCell.h */,
+				DCA966A514754B86008465B3 /* CommentsTableCell.m */,
+				DCA966A614754B86008465B3 /* CommentsTableCell.xib */,
 				DCBC8AC614238C190067C0B4 /* iConcept_Live.xcdatamodeld */,
 				DCBC8AB814238C180067C0B4 /* Supporting Files */,
 			);
@@ -254,8 +283,9 @@
 				DCB6BE02142E012800DCA5F4 /* AroundMeMapResults.xib */,
 				DCCCAFFB146FEE29007D62E4 /* DetailMapViewController.xib */,
 				DCAFA4DF147291FE006C5969 /* MoreViewController.xib */,
-				DCAFA4F214729F4D006C5969 /* AboutViewController.xib */,
 				DCAFA4E914729864006C5969 /* ShareViewController.xib */,
+				DC8A41AD1478D3E900FF9245 /* CategoryViewController.xib */,
+				DCAFA4F214729F4D006C5969 /* AboutViewController.xib */,
 				DCCD3E611453B9D0002C46A1 /* DetailsViewController.xib */,
 			);
 			name = View;
@@ -264,8 +294,11 @@
 		DCCE8AFC1452BD75009559FB /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				DC8A41B61478DB0100FF9245 /* Default.png */,
+				DCA927071478037E00CB8D60 /* 33-cabinet.png */,
 				DCAFA4EE14729D33006C5969 /* 112-group.png */,
 				DCCCB004146FF28A007D62E4 /* 71-compass.png */,
+				DCA92705147802F800CB8D60 /* 08-chat.png */,
 				DCCCAFFE146FEE62007D62E4 /* 96-book.png */,
 				DCAFA4EC14729C65006C5969 /* Shout.png */,
 				DCCE8B011452BF50009559FB /* 73-radar.png */,
@@ -365,6 +398,12 @@
 				DCAFA4ED14729C65006C5969 /* Shout.png in Resources */,
 				DCAFA4EF14729D33006C5969 /* 112-group.png in Resources */,
 				DCAFA4F414729F4E006C5969 /* AboutViewController.xib in Resources */,
+				DCA966A814754B86008465B3 /* CommentsTableCell.xib in Resources */,
+				DCA966AE14754D52008465B3 /* CommentsDetailViewController.xib in Resources */,
+				DCA92706147802F800CB8D60 /* 08-chat.png in Resources */,
+				DCA927081478037E00CB8D60 /* 33-cabinet.png in Resources */,
+				DC8A41AF1478D3E900FF9245 /* CategoryViewController.xib in Resources */,
+				DC8A41B71478DB0100FF9245 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +436,9 @@
 				DCAFA4E0147291FE006C5969 /* MoreViewController.m in Sources */,
 				DCAFA4EA14729864006C5969 /* ShareViewController.m in Sources */,
 				DCAFA4F314729F4E006C5969 /* AboutViewController.m in Sources */,
+				DCA966A714754B86008465B3 /* CommentsTableCell.m in Sources */,
+				DCA966AD14754D52008465B3 /* CommentsDetailViewController.m in Sources */,
+				DC8A41AE1478D3E900FF9245 /* CategoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +469,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -442,6 +485,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -451,7 +495,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -460,6 +505,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -468,11 +515,13 @@
 		DCBC8ACC14238C190067C0B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iConcept Live/iConcept Live-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "iConcept Live/iConcept Live-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -480,11 +529,15 @@
 		DCBC8ACD14238C190067C0B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iConcept Live/iConcept Live-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "iConcept Live/iConcept Live-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -12,10 +12,11 @@
 
 @implementation Details
 @synthesize RETAILERID;
-
+@synthesize nameView;
 @synthesize textView;
+@synthesize homepageView;
 @synthesize scrollView;
-
+@synthesize contactView;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -42,7 +43,16 @@
     
     textView.layer.cornerRadius = 5;
     textView.clipsToBounds = YES;
-    textView.backgroundColor = UIColor.blackColor;
+    
+    nameView.layer.cornerRadius = 5;
+    nameView.clipsToBounds = YES;
+    
+    homepageView.layer.cornerRadius = 5;
+    homepageView.clipsToBounds = YES;
+    
+    contactView.layer.cornerRadius = 5;
+    contactView.clipsToBounds = YES;
+    //textView.backgroundColor = UIColor.blackColor;
     
     NSArray* detailsData = [self.RETAILERID JSONValue];
  
@@ -68,19 +78,29 @@
     
     NSString* total = @"";
     total = [total stringByAppendingString:name];
-    total = [total stringByAppendingString:@"\n\n"];
+    total = [total stringByAppendingString:@"\n"];
     total = [total stringByAppendingString:addressDetail];
-    total = [total stringByAppendingString:@"\n\n"];
-    total = [total stringByAppendingString:HOMEPAGEURL];
+   // total = [total stringByAppendingString:@"\n\n"];
+    //total = [total stringByAppendingString:HOMEPAGEURL];
     
     [self.textView setText:total];
-
+    [self.nameView setText:total];
+    [self.homepageView setText:HOMEPAGEURL];
     
-       scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
+    scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
     scrollView.contentSize = CGSizeMake(847, 800);
   
     [scrollView addSubview:textView];
     [textView release];
+    
+    [scrollView addSubview:nameView];
+    [nameView release];
+    
+    [scrollView addSubview:homepageView];
+    [homepageView release];
+    
+    [scrollView addSubview:contactView];
+    [contactView release];
     
     [self.view addSubview:scrollView];
     [scrollView release];

@@ -7,11 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <CoreLocation/CoreLocation.h>
 //The first screen of the application
-@interface HomeViewController : UIViewController{
-
+@interface HomeViewController : UIViewController <CLLocationManagerDelegate>{
+    NSMutableData* responseData; //use to store data from server
+     CLLocationManager *lm;
+    NSString *responseString;
+    NSURLConnection *_connection;
+    NSString *lat;
+    NSString *lng;
 }
+
+@property (retain, nonatomic) NSString* responseString;
+@property (retain, nonatomic) NSMutableData* responseData;
 
 - (IBAction)pushViewController:(id)sender;
 

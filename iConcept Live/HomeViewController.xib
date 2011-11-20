@@ -42,7 +42,7 @@
 					<object class="IBUIButton" id="704704045">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{41, 101}, {103, 71}}</string>
+						<string key="NSFrame">{{20, 141}, {103, 71}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="836220960"/>
@@ -80,7 +80,7 @@
 					<object class="IBUIButton" id="836220960">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{190, 101}, {98, 71}}</string>
+						<string key="NSFrame">{{145, 101}, {175, 151}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="573070289"/>
@@ -90,7 +90,7 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">By City</string>
+						<string key="IBUINormalTitle">Search by Category</string>
 						<reference key="IBUIHighlightedTitleColor" ref="506351072"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -160,6 +160,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">pushCategoryViewController:</string>
+						<reference key="source" ref="836220960"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">12</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">pushMoreViewController:</string>
 						<reference key="source" ref="573070289"/>
 						<reference key="destination" ref="372490531"/>
@@ -185,8 +194,8 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="836220960"/>
-							<reference ref="704704045"/>
 							<reference ref="573070289"/>
+							<reference ref="704704045"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -255,7 +264,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">9</int>
+			<int key="maxID">12</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

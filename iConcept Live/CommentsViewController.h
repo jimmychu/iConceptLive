@@ -1,23 +1,27 @@
 //
 //  CommentsViewController.h
-//  iConcept Live
+//  BNL
 //
-//  Created by Jia Zhu on 10/10/11.
+//  Created by Jia Zhu on 8/10/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface CommentsViewController : UIViewController{
-    IBOutlet UITableView *tableView1;
+    IBOutlet UITableView *commentstableView;
     NSString *responseString;
-    int total;
     NSMutableArray *resultsArray;
+    NSMutableArray *nameArray;
+    NSMutableArray *datetimeArray;
+    UINavigationController *navController;
+    int total;
 }
-@property (nonatomic, retain) IBOutlet UITableView *tableView1;
-
+@property (nonatomic, retain) IBOutlet UITableView *commentstableView;
+@property int total;
 @property (retain, nonatomic) NSString* responseString;
 @property (nonatomic, retain)			NSMutableArray	*resultsArray;
-@property int total;
-
+@property (nonatomic, retain) UINavigationController *navController;
+@property (nonatomic, retain)			NSMutableArray	*nameArray;
+@property (nonatomic, retain)			NSMutableArray	*datetimeArray;
 @end

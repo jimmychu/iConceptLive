@@ -1,16 +1,16 @@
 //
-//  AroundMeViewController.m
+//  CategoryViewController.m
 //  iConcept Live
 //
-//  Created by Jia Zhu on 17/09/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Jia Zhu on 20/11/11.
+//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "AroundMeViewController.h"
+#import "CategoryViewController.h"
 #import "AroundMeResultsViewController.h"
-
-@implementation AroundMeViewController
-@synthesize aroundMeViewtableView;
+#import "JSON.h"
+@implementation CategoryViewController
+@synthesize categoryViewtableView;
 @synthesize categoryArray;
 @synthesize responseData;
 @synthesize responseString;
@@ -40,7 +40,7 @@
     
     // Do any additional setup after loading the view from its nib.
     [super viewDidLoad];
-        
+    
     categoryArray = [[NSMutableArray alloc] init]; 
 	[categoryArray addObject:@"Restaurants"];
     [categoryArray addObject:@"Bars and Clubs"];
@@ -48,7 +48,7 @@
     [categoryArray addObject:@"Entertainment"];
     [categoryArray addObject:@"Things to do"];
     [categoryArray addObject:@"Luxury Products"];
-     
+    
 }
 
 
@@ -70,8 +70,8 @@
     
     static NSString *CellIdentifier = @"Cell";
     
-UITableViewCell *cell = (UITableViewCell *)[aroundMeViewtableView dequeueReusableCellWithIdentifier:CellIdentifier];
-     
+    UITableViewCell *cell = (UITableViewCell *)[categoryViewtableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
@@ -87,23 +87,22 @@ UITableViewCell *cell = (UITableViewCell *)[aroundMeViewtableView dequeueReusabl
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     self.responseData = [NSMutableData data];
-    UITableViewCell *cell = (UITableViewCell *)[aroundMeViewtableView cellForRowAtIndexPath:indexPath];
+    UITableViewCell *cell = (UITableViewCell *)[categoryViewtableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-
+    
     self.title = cell.textLabel.text;
     
     //Get data from remote server
     NSString *url = [@"http://www.iconceptpress.com/iconceptlive/getdata.php?category=" stringByAppendingString:cell.textLabel.text];
-   
+    
     
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
-   
+    //NSLog(url);
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     
-       _connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];    
+    _connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];    
     
-   
+    
 }
 
 
@@ -124,10 +123,10 @@ UITableViewCell *cell = (UITableViewCell *)[aroundMeViewtableView dequeueReusabl
     [_connection release];
     responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     self.responseData = nil; //release the data
- 
+     //  NSLog(responseString);
     AroundMeResultsViewController *aroundmeResultsController = [[AroundMeResultsViewController alloc] init];
     aroundmeResultsController.title = self.title;
-
+    
     aroundmeResultsController.responseString = self.responseString;
     
     aroundmeResultsController.navController = self.navigationController; //record navigation controller

@@ -18,6 +18,9 @@
     NSMutableData* responseData;
     
     UITextView *textView;
+    UITextView *nameView;
+    UITextView *homepageView;
+    UITextView *contactView;
     UIScrollView *scrollView;
 }
 
@@ -26,4 +29,7 @@
 
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, retain) IBOutlet UITextView *textView;
+@property (nonatomic, retain) IBOutlet UITextView *nameView;
+@property (nonatomic, retain) IBOutlet UITextView *contactView;
+@property (nonatomic, retain) IBOutlet UITextView *homepageView;
 @end
